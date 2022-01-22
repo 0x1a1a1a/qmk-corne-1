@@ -10,6 +10,8 @@
 #define HOME_L LALT_T(KC_L)
 #define HOME_SCLN LGUI_T(KC_SCLN)
 
+#define DND HYPR(KC_Z)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
 
