@@ -11,30 +11,36 @@
 #define HOME_SCLN LGUI_T(KC_SCLN)
 
 #define DND HYPR(KC_Z)
+#define LANG_P LCTL(KC_SPC)
+#define LANG_N LCTL(LOPT(KC_SPC))
+#define EMOJI LCTL(LCMD(KC_SPC))
+#define SPC_L LCTL(KC_LEFT)
+#define SPC_R LCTL(KC_RGHT)
+#define MCTRL HYPR(KC_V)
+#define ALFRD HYPR(KC_S)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_split_3x6_3(
+    [0] = LAYOUT_split_3x6_3(
 
-       KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  XXXXXXX,
+         KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  XXXXXXX,
 
-       KC_ENT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+         KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
 
-       KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RCTL,
+         KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RCTL,
 
-                                          KC_LOPT,  KC_BSPC,  MO(1),     TO(2), LCMD_T(KC_SPC), KC_RSFT
+                                   KC_LOPT, KC_BSPC,   MO(1),                        TO(2), LCMD_T(KC_SPC), KC_RSFT
 
-
-  ),
+    ),
 
   [1] = LAYOUT_split_3x6_3(
 
-      HYPR(KC_Z), XXXXXXX, XXXXXXX, KC_UP,         XXXXXXX, LCTL(KC_SPC),                        LCTL(LOPT(KC_SPC)), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+            DND, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX,  LANG_P,                       LANG_N, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 
-      XXXXXXX,    XXXXXXX, KC_LEFT, KC_DOWN,       KC_RGHT, LCTL(LCMD(KC_SPC)),                  XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 
-      HYPR(KC_S), XXXXXXX, XXXXXXX, LCTL(KC_LEFT), HYPR(KC_V), LCTL(KC_RGHT),                    XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+          ALFRD, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
 
-                                                           _______, _______, XXXXXXX,    XXXXXXX, _______, _______
+                                   _______, _______, XXXXXXX,                      XXXXXXX, _______, _______
 
   ),
 
