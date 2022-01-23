@@ -19,20 +19,20 @@ Figma-specific layer
 
 
 
-
+// Home row mod-taps
 #define HOME_A LCTL_T(KC_A)
 #define HOME_S LOPT_T(KC_S)
-#define HOME_D LCMD_T(KC_D)
-#define HOME_F LSFT_T(KC_F)
-#define HOME_J LSFT_T(KC_J)
-#define HOME_K LCMD_T(KC_K)
+#define HOME_D LSFT_T(KC_D)
+#define HOME_F LCMD_T(KC_F)
+#define HOME_J LCMD_T(KC_J)
+#define HOME_K LSFT_T(KC_K)
 #define HOME_L LOPT_T(KC_L)
 #define HOME_SC LCTL_T(KC_SCLN)
 
-#define LANG_P LCTL(KC_SPC)
-#define LANG_N LCTL(LOPT(KC_SPC))
-#define EMOJI LCTL(LCMD(KC_SPC))
-#define DND HYPR(KC_Z) // 
+#define LANG_P LCTL(KC_SPC) // Select the previous input source (macOS)
+#define LANG_N LCTL(LOPT(KC_SPC)) // Select next source in Input menu (macOS)
+#define EMOJI LCTL(LCMD(KC_SPC)) // Shortcut for Emoji&Symbols (macOS)
+#define DND HYPR(KC_Z) // Shortcut for Do Not Disturb (macOS)
 #define SPC_L LCTL(KC_LEFT) // Shortcut for move right a space (macOS)
 #define SPC_R LCTL(KC_RGHT) // Shortcut for move left a space (macOS)
 #define MCTRL HYPR(KC_V) // Shortcut for Mission Control (macOS)
