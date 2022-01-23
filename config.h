@@ -4,8 +4,9 @@
 
 #define USE_SERIAL_PD2
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
+#define IGNORE_MOD_TAP_INTERRUPT // Prevent normal rollover on alphas from accidentally triggering mods.
+#define TAPPING_FORCE_HOLD // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_TERM 250 // Configure the global tapping term (default: 200ms).
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
