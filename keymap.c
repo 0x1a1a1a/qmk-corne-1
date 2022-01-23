@@ -2,10 +2,6 @@
 
 BACKLOG
 
-
-Next tab in Chrome: command + shift + close bracket
-Previous tab in Chrome: command + shift + open bracket
-Shortcuts for Zoom: mute audio, leave call (Command+W?)
 Figma-specific layer
 
 */
@@ -29,14 +25,14 @@ Figma-specific layer
 #define HOME_L LOPT_T(KC_L)
 #define HOME_SC LCTL_T(KC_SCLN)
 
-#define LANG_P LCTL(KC_SPC) // Select the previous input source (macOS)
-#define LANG_N LCTL(LOPT(KC_SPC)) // Select next source in Input menu (macOS)
-#define EMOJI LCTL(LCMD(KC_SPC)) // Shortcut for Emoji&Symbols (macOS)
-#define DND HYPR(KC_Z) // Shortcut for Do Not Disturb (macOS)
-#define SPC_L LCTL(KC_LEFT) // Shortcut for move right a space (macOS)
-#define SPC_R LCTL(KC_RGHT) // Shortcut for move left a space (macOS)
-#define MCTRL HYPR(KC_V) // Shortcut for Mission Control (macOS)
-#define ALFRD HYPR(KC_S) // Shortcut for Alfred
+#define LANG_P LCTL(KC_SPC) // macOS: Select the previous input source
+#define LANG_N LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
+#define EMOJI LCTL(LCMD(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
+#define DND HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
+#define SPC_L LCTL(KC_LEFT) // macOS: Shortcut for move right a space
+#define SPC_R LCTL(KC_RGHT) // macOS: Shortcut for move left a space
+#define MCTRL HYPR(KC_V) // macOS: Shortcut for Mission Control
+#define ALFRD HYPR(KC_S) // macOS: Shortcut for Alfred
 
 #define RBRC_L LSFT(KC_9) // Left round bracket
 #define RBRC_R LSFT(KC_0) // Right round bracket
@@ -44,15 +40,19 @@ Figma-specific layer
 #define NDASH LOPT(KC_MINS) // En dash
 #define MDASH LSFT(LOPT(KC_MINS)) // Em dash
 
-#define SS_OPT LSFT(LCMD(KC_5)) // Screenshot and recording options (macOS)
-#define SS_C_A LCTL(LSFT(LCMD(KC_4))) // Copy picture of selected area to the clipboard (macOS)
-#define SS_C_S LCTL(LSFT(LCMD(KC_3))) // Copy picture of screen to the clipboard (macOS)
-#define SS_F_A LSFT(LCMD(KC_4)) // Save picture of selected area as a file (macOS)
-#define SS_F_S LSFT(LCMD(KC_3)) // Save picture of screen as a file (macOS)
+#define SS_OPT LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
+#define SS_C_A LCTL(LSFT(LCMD(KC_4))) // macOS: Copy picture of selected area to the clipboard
+#define SS_C_S LCTL(LSFT(LCMD(KC_3))) // macOS: Copy picture of screen to the clipboard
+#define SS_F_A LSFT(LCMD(KC_4)) // macOS: Save picture of selected area as a file
+#define SS_F_S LSFT(LCMD(KC_3)) // macOS: Save picture of screen as a file
 
 #define AU_MT KC_KB_MUTE // Mute all sounds
 #define AU_VUP KC_KB_VOLUME_UP // Volume up
 #define AU_VDN KC_KB_VOLUME_DOWN // Volume down
+
+#define TAB_N LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
+#define TAB_P LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
+
 
 
 
