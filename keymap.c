@@ -3,10 +3,10 @@
 BACKLOG
 
 
- Next tab in Chrome: command + shift + close bracket
+Next tab in Chrome: command + shift + close bracket
 Previous tab in Chrome: command + shift + open bracket
- Shortcuts for Zoom: mute audio, leave call (Command+W?)
-  Screenshots on macOS
+Shortcuts for Zoom: mute audio, leave call (Command+W?)
+Screenshots on macOS
 Figma-specific layer
 
 */
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSLS,
           KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,                    KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
-          KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RCTL,
+          KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
                                      KC_SPC, XXXXXXX,   MO(1),                   TO(2), XXXXXXX, KC_BSPC
 
     ),
@@ -78,9 +78,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
 
-           RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  RBRC_L,  RBRC_R, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                 KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                 KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX, XXXXXXX,
+           RESET, BL_TOGG, BL_STEP, BL_BRTG, XXXXXXX, XXXXXXX,                  RBRC_L,  RBRC_R, XXXXXXX, KC_MINS,   NDASH,   MDASH,
+         RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, XXXXXXX,                 KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, XXXXXXX,                 KC_LCBR, KC_RCBR, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX,
                                     _______, XXXXXXX,   TO(0),                 XXXXXXX, XXXXXXX, _______
 
   )
