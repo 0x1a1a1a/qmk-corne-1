@@ -46,10 +46,6 @@ Figma-specific layer
 #define SS_F_A LSFT(LCMD(KC_4)) // macOS: Save picture of selected area as a file
 #define SS_F_S LSFT(LCMD(KC_3)) // macOS: Save picture of screen as a file
 
-#define AU_MT KC_KB_MUTE // Mute all sounds
-#define AU_VUP KC_KB_VOLUME_UP // Volume up
-#define AU_VDN KC_KB_VOLUME_DOWN // Volume down
-
 #define TAB_N LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
 #define TAB_P LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
 
@@ -71,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Arrows, macOS-specific controls and cyrillic helpers
     [1] = LAYOUT_split_3x6_3(
 
-          KC_GRV, KC_LBRC, KC_RBRC,   KC_UP,   ALFRD,  LANG_P,          LANG_N,  RBRC_L,  RBRC_R, XXXXXXX, KC_LBRC, KC_RBRC,
+          KC_GRV,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_P,          LANG_N,  RBRC_L,  RBRC_R, XXXXXXX, KC_LBRC, KC_RBRC,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         KC_MINS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, XXXXXXX,
                                     _______, _______, XXXXXXX,         XXXXXXX, _______, _______
