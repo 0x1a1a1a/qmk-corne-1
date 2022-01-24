@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Numpad
     [2] = LAYOUT_split_3x6_3(
 
-         KC_MUTE, KC_VOLU, KC_VOLD, XXXXXXX, XXXXXXX,  UNDRSC,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
+         XXXXXXX, KC_MUTE, KC_VOLU, KC_VOLD, XXXXXXX,  UNDRSC,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_QUES,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_EXLM,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
                                     _______, _______,   TO(3),         XXXXXXX, _______, _______
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // System and RGB controls, additional special characters
     [3] = LAYOUT_split_3x6_3(
 
-         KC_SLEP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND,          RBRC_L,  RBRC_R, XXXXXXX, KC_MINS,   NDASH,   MDASH,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND,          RBRC_L,  RBRC_R, XXXXXXX, KC_MINS,   NDASH,   MDASH,
          XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD,         KC_LCBR, KC_RCBR, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX,
                                     _______, _______,   TO(0),         XXXXXXX, _______, _______
