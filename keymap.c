@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // System and RGB controls, additional special characters
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND,          RBRC_L,  RBRC_R, XXXXXXX, KC_MINS,   NDASH,   MDASH,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLEP,     DND,          RBRC_L,  RBRC_R, XXXXXXX, KC_MINS,   NDASH,   MDASH,
          XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD,         KC_LCBR, KC_RCBR, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX,
                                     _______, _______,   TO(0),         XXXXXXX, _______, _______
