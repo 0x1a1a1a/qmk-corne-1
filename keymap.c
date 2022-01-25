@@ -49,6 +49,8 @@ Figma-specific layer
 #define TAB_N LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
 #define TAB_P LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
 
+#define M_ENT LT(L_MOUS, KC_ENT) // Momentarily activates Mouse keys layer when held, and sends Enter when tapped
+
 
 
 
@@ -68,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
 
          XXXXXXX,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,          LANG_P,  RBRC_L,  RBRC_R,  KC_GRV, KC_LBRC, KC_RBRC,
-         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         KC_MINS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
+         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         KC_MINS,  HOME_J,  HOMEtt_K,  HOME_L, HOME_SC, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, XXXXXXX,
                                     _______, _______, XXXXXXX,           TO(4), _______, _______
 
@@ -77,9 +79,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Numpad
     [2] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, KC_MUTE, KC_VOLU, KC_VOLD, XXXXXXX,  UNDRSC,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  UNDRSC,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_QUES,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_EXLM,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
+         XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_EXLM,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
                                     _______, _______,   TO(3),         XXXXXXX, _______, _______
 
     ),
@@ -95,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Mouse keys
-    [4] = LAYOUT_split_3x6_3(
+    [L_MOUS] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,         KC_LBRC,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
