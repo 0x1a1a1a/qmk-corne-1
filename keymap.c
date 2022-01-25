@@ -49,25 +49,28 @@ Figma-specific layer
 #define TAB_N LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
 #define TAB_P LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
 
-#define M_ENT LT(4, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
-#define M_TAB LT(3, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
+#define M_ENT LT(2, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
+#define M_TAB LT(4, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
+
+#define CYR_CM LSFT(KC_SLSH) // Cyrillic comma
+#define CYR_PD KC_SLSH // Cyrillic period
 
 
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    // Alphas
+    // MAIN
     [0] = LAYOUT_split_3x6_3(
 
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSLS,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
          XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
-                                      M_ENT,  KC_SPC,   MO(1),           MO(2), KC_BSPC,   M_TAB
+                                      M_ENT,  KC_SPC,   MO(1),           MO(3), KC_BSPC,   M_TAB
 
     ),
 
-    // Arrows, macOS-specific controls and cyrillic helpers
+    // LEFT SIDE MOD: Arrows, macOS-specific controls and cyrillic helpers
     [1] = LAYOUT_split_3x6_3(
 
          XXXXXXX,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,          LANG_P,  RBRC_L,  RBRC_R,  KC_GRV, KC_LBRC, KC_RBRC,
@@ -77,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // Mouse keys
+    // LEFT SIDE MOD: M_ENT, Mouse keys
     [2] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -87,22 +90,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // Numpad
+    // RIGHT SIDE MOD: System and RGB controls, additional special characters, cyrillic letters
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  UNDRSC,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_QUES,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
-         XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_EXLM,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
+         XXXXXXX,     DND, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE,          RBRC_L,  RBRC_R,  UNDRSC,  KC_GRV, KC_LBRC, KC_RBRC,
+         RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG, KC_EXLM,         KC_LBRC, KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX,
+         RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD, KC_QUES,         KC_LCBR, KC_RCBR,  CYR_CM,  CYR_PD, XXXXXXX, KC_PIPE,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
 
-    // System and RGB controls, additional special characters, cyrillic letters
+    // RIGHT SIDE MOD: Numpad
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,     DND, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE,          RBRC_L,  RBRC_R,  KC_GRV,  KC_GRV, KC_LBRC, KC_RBRC,
-         XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         KC_LBRC, KC_RBRC, KC_PIPE, KC_MINS,   NDASH,   MDASH,
-         XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD,         KC_LCBR, KC_RCBR, KC_SLSH, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_QUES,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     )
