@@ -1,19 +1,5 @@
-/*
-
-BACKLOG
-
-Figma-specific layer
-
-*/
-
-
-
-
 #include QMK_KEYBOARD_H
 #include <stdio.h>
-
-
-
 
 // Home row mods (mod-taps)
 #define HOME_A LCTL_T(KC_A)
@@ -39,6 +25,8 @@ Figma-specific layer
 #define UNDRSC LSFT(KC_MINS) // Underscore
 #define NDASH LOPT(KC_MINS) // En dash
 #define MDASH LSFT(LOPT(KC_MINS)) // Em dash
+#define D_QUOT LSFT(KC_QUOT) // Double quote
+#define COLON LSFT(KC_SCLN) // Colon
 
 #define SS_OPT LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
 #define SS_C_A LCTL(LSFT(LCMD(KC_4))) // macOS: Copy picture of selected area to the clipboard
@@ -49,8 +37,8 @@ Figma-specific layer
 #define TAB_N LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
 #define TAB_P LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
 
-#define M_ENT LT(2, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
-#define M_TAB LT(4, KC_ENT) // Momentarily activates Layer 3 when held, and sends Enter when tapped
+#define M_ENT LT(2, KC_ENT) // Momentarily activates Layer 2 when held, and sends Enter when tapped
+#define M_TAB LT(4, KC_TAB) // Momentarily activates Layer 4 when held, and sends Tab when tapped
 
 #define CYR_CM LSFT(KC_SLSH) // Cyrillic comma
 #define CYR_PD KC_SLSH // Cyrillic period
@@ -83,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: M_ENT, Mouse keys
     [2] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX, XXXXXXX,
+         XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD,         XXXXXXX, KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         KC_BTN1, KC_BTN2, KC_BTN3
 
     ),
@@ -93,10 +81,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: System and RGB controls, additional special characters, cyrillic letters
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,     DND, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE,          RBRC_L,  RBRC_R,  UNDRSC,  KC_GRV, KC_LBRC, KC_RBRC,
-         RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG, KC_EXLM,         KC_LBRC, KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX,
-         RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD, KC_QUES,         KC_LCBR, KC_RCBR,  CYR_CM,  CYR_PD, XXXXXXX, KC_PIPE,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+             DND, KC_MUTE, KC_VOLD, KC_VOLU, KC_QUOT,  D_QUOT,          RBRC_L,  RBRC_R, XXXXXXX,  KC_GRV, KC_LBRC, KC_RBRC,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM,         KC_LBRC, KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON,         KC_LCBR, KC_RCBR,  CYR_CM,  CYR_PD, XXXXXXX, KC_PIPE,
+                                    XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
 
