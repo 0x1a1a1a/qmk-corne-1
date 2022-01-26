@@ -3,12 +3,12 @@
 
 // Home row mods (mod-taps)
 #define HOME_A LCTL_T(KC_A)
-#define HOME_S LOPT_T(KC_S)
-#define HOME_D LCMD_T(KC_D)
-#define HOME_F LSFT_T(KC_F)
-#define HOME_J LSFT_T(KC_J)
-#define HOME_K LCMD_T(KC_K)
-#define HOME_L LOPT_T(KC_L)
+#define HOME_S LSFT_T(KC_S)
+#define HOME_D LOPT_T(KC_D)
+#define HOME_F LCMD_T(KC_F)
+#define HOME_J LCMD_T(KC_J)
+#define HOME_K LOPT_T(KC_K)
+#define HOME_L LSFT_T(KC_L)
 #define HOME_SC LCTL_T(KC_SCLN)
 
 #define LANG_P LCTL(KC_SPC) // macOS: Select the previous input source
