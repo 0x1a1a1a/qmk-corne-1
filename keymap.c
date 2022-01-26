@@ -4,10 +4,10 @@
 // Home row mods (mod-taps)
 #define HOME_A LCTL_T(KC_A)
 #define HOME_S LOPT_T(KC_S)
-#define HOME_D LSFT_T(KC_D)
-#define HOME_F LCMD_T(KC_F)
-#define HOME_J LCMD_T(KC_J)
-#define HOME_K LSFT_T(KC_K)
+#define HOME_D LCMD_T(KC_D)
+#define HOME_F LSFT_T(KC_F)
+#define HOME_J LSFT_T(KC_J)
+#define HOME_K LCMD_T(KC_K)
 #define HOME_L LOPT_T(KC_L)
 #define HOME_SC LCTL_T(KC_SCLN)
 
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // LEFT SIDE MOD: M_ENT, Mouse keys
+    // LEFT SIDE MOD: M_ENT, Mouse keys, system and RGB controls
     [2] = LAYOUT_split_3x6_3(
 
          XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // RIGHT SIDE MOD: System and RGB controls, additional special characters, cyrillic letters
+    // RIGHT SIDE MOD: Additional special characters, cyrillic letters
     [3] = LAYOUT_split_3x6_3(
 
              DND, KC_MUTE, KC_VOLD, KC_VOLU, KC_QUOT,  D_QUOT,          RBRC_L,  RBRC_R, XXXXXXX,  KC_GRV, KC_LBRC, KC_RBRC,
