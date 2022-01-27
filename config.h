@@ -8,6 +8,7 @@
 #define TAPPING_FORCE_HOLD // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_TERM 175 // Configure the global tapping term (default: 200ms).
 
+/*
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
     #define RGBLIGHT_ANIMATIONS
@@ -17,6 +18,7 @@
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 #endif
+*/
 
 #ifdef RGB_MATRIX_ENABLE
 	#define RGB_MATRIX_KEYPRESSES
@@ -34,3 +36,5 @@
 #define MOUSEKEY_DELAY 0
 #define MOUSEKEY_INITIAL_SPEED 500
 #define MOUSEKEY_BASE_SPEED 500
+
+#define UNICODE_SELECTED_MODES UC_MAC
