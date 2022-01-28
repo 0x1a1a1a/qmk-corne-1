@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          XXXXXXX,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,          LANG_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-         XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLU,
+         XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: Additional special characters, cyrillic letters
     [3] = LAYOUT_split_3x6_3(
 
-             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT,  RBRC_L,          RBRC_R,  RBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, KC_BSLS,
+             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT,  RBRC_L,          RBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
          XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM, KC_LBRC,         KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON, KC_LCBR,         KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
