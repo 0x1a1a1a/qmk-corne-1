@@ -27,6 +27,12 @@
 #define MDASH LSFT(LOPT(KC_MINS)) // Em dash
 #define D_QUOT LSFT(KC_QUOT) // Double quote
 #define COLON LSFT(KC_SCLN) // Colon
+#define ATSGN LSFT(KC_2) // At sign
+#define NMBR LSFT(KC_3) // Number sign
+#define DLLR LSFT(KC_4) // Dollar sign
+#define PRCNT LSFT(KC_5) // Percent sign
+#define CARET LSFT(KC_6) // Caret
+#define AMPRD LSFT(KC_7) // Ampersand
 
 #define SS_OPT LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
 #define SS_C_A LCTL(LSFT(LCMD(KC_4))) // macOS: Copy picture of selected area to the clipboard
@@ -49,7 +55,7 @@
 #define CYR_QUES LSFT(KC_7) // Cyrillic: Question mark
 #define CYR_CLN LSFT(KC_6) // Cyrillic: Colon
 #define CYR_SCLN LSFT(KC_4) // Cyrillic: Semicolon
-#define CYR_QUOT LOPT(KC_O) // Cyrillic: Quote
+#define CYR_QT LOPT(KC_O) // Cyrillic: Quote
 #define CYR_DQT LSFT(KC_2) // Cyrillic: Double quote
 
 
@@ -77,13 +83,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // LEFT SIDE MOD: Additional special characters (CYR)
+    // LEFT SIDE MOD: Special characters (CYR)
     [1] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CYR_DQT, XXXXXXX,          CYR_KH,  CYR_II,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,CYR_EXLM, XXXXXXX,           CYR_E, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX,CYR_SCLN, CYR_CLN, XXXXXXX,         XXXXXXX, XXXXXXX,  CYR_CM,  CYR_PD, XXXXXXX, XXXXXXX,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+         XXXXXXX, XXXXXXX, XXXXXXX, RDBRC_L, RDBRC_R,  CYR_CM,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,         KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_EXLM,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT, XXXXXXX, XXXXXXX,
+                                    XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
 
@@ -102,31 +108,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Arrows and macOS-specific controls
     [2] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,          LANG_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+             DND,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
-
+    
     // RIGHT SIDE MOD: Numpad
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COMM,          KC_DOT,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX,  KC_EQL,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
 
-    // RIGHT SIDE MOD: Additional special characters (EN)
+    // RIGHT SIDE MOD: Special characters (EN)
     [4] = LAYOUT_split_3x6_3(
 
-             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT, RDBRC_L,         RDBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
-         XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM, KC_LBRC,         KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON, KC_LCBR,         KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX,   PRCNT,   ATSGN, RDBRC_L, RDBRC_R, KC_COMM,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+         XXXXXXX,   CARET,    NMBR, KC_LBRC, KC_RBRC, KC_QUES,         KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX,   AMPRD,    DLLR, KC_LCBR, KC_RCBR, KC_EXLM,           COLON, KC_SCLN, KC_QUOT,  D_QUOT, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
-
     )
 
 };
