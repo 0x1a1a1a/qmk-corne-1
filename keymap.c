@@ -20,8 +20,8 @@
 #define MCTRL HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define ALFRD HYPR(KC_S) // macOS: Shortcut for Alfred
 
-#define RBRC_L LSFT(KC_9) // Left round bracket
-#define RBRC_R LSFT(KC_0) // Right round bracket
+#define RDBRC_L LSFT(KC_9) // Left round bracket
+#define RDBRC_R LSFT(KC_0) // Right round bracket
 #define UNDRSC LSFT(KC_MINS) // Underscore
 #define NDASH LOPT(KC_MINS) // En dash
 #define MDASH LSFT(LOPT(KC_MINS)) // Em dash
@@ -45,8 +45,12 @@
 #define CYR_E KC_QUOT // Cyrillic: E
 #define CYR_KH KC_LBRC // Cyrillic: Kh
 #define CYR_II KC_RBRC // Cyrillic: Hard sign
-
-
+#define CYR_EXLM LSFT(KC_1) // Cyrillic: Exclamation mark
+#define CYR_QUES LSFT(KC_7) // Cyrillic: Question mark
+#define CYR_CLN LSFT(KC_6) // Cyrillic: Colon
+#define CYR_SCLN LSFT(KC_4) // Cyrillic: Semicolon
+#define CYR_QUOT LOPT(KC_O) // Cyrillic: Quote
+#define CYR_DQT LSFT(KC_2) // Cyrillic: Double quote
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -76,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Additional special characters (CYR)
     [1] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_KH,  CYR_II, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           CYR_E, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,  CYR_CM,  CYR_PD, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CYR_DQT, XXXXXXX,          CYR_KH,  CYR_II, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,CYR_EXLM, XXXXXXX,           CYR_E, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX,CYR_SCLN, CYR_CLN, XXXXXXX,         XXXXXXX, XXXXXXX,  CYR_CM,  CYR_PD, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
@@ -118,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: Additional special characters (EN)
     [4] = LAYOUT_split_3x6_3(
 
-             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT,  RBRC_L,          RBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT, RDBRC_L,         RDBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
          XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM, KC_LBRC,         KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON, KC_LCBR,         KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
