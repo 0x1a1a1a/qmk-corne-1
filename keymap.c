@@ -40,8 +40,11 @@
 #define M_ENT LT(1, KC_ENT) // Momentarily activates Layer 2 when held, and sends Enter when tapped
 #define M_TAB LT(4, KC_TAB) // Momentarily activates Layer 4 when held, and sends Tab when tapped
 
-#define CYR_CM LSFT(KC_SLSH) // Cyrillic comma
-#define CYR_PD KC_SLSH // Cyrillic period
+#define CYR_CM LSFT(KC_SLSH) // Cyrillic: Comma
+#define CYR_PD KC_SLSH // Cyrillic: Period
+#define CYR_E KC_QUOT // Cyrillic: E
+#define CYR_KH KC_LBRC // Cyrillic: Kh
+#define CYR_II KC_RBRC // Cyrillic: Hard sign
 
 
 
@@ -70,11 +73,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // LEFT SIDE MOD: Letters and special characters in Cyrillic
+    // LEFT SIDE MOD: Additional special characters (CYR)
     [1] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_KH,  CYR_II, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           CYR_E, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,  CYR_CM,  CYR_PD, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
@@ -92,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 */
 
-    // LEFT SIDE MOD: Arrows, macOS-specific controls and cyrillic helpers
+    // LEFT SIDE MOD: Arrows and macOS-specific controls
     [2] = LAYOUT_split_3x6_3(
 
          XXXXXXX,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,          LANG_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
@@ -102,23 +105,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
-    // RIGHT SIDE MOD: Additional special characters, cyrillic letters
-    [3] = LAYOUT_split_3x6_3(
-
-             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT,  RBRC_L,          RBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
-         XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM, KC_LBRC,         KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON, KC_LCBR,         KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                    XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
-
-    ),
-
     // RIGHT SIDE MOD: Numpad
-    [4] = LAYOUT_split_3x6_3(
+    [3] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_COMM,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,          KC_DOT,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, KC_BSLS,  KC_EQL,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+
+    ),
+
+    // RIGHT SIDE MOD: Additional special characters (EN)
+    [4] = LAYOUT_split_3x6_3(
+
+             DND, XXXXXXX, XXXXXXX, KC_QUOT,  D_QUOT,  RBRC_L,          RBRC_R,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+         XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_EXLM, KC_LBRC,         KC_RBRC, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN,   COLON, KC_LCBR,         KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                    XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
 
     )
 
