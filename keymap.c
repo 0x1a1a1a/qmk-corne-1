@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
 
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
          XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
                                       M_ENT,  KC_SPC,   MO(2),           MO(3), KC_BSPC,   M_TAB
 
@@ -86,8 +86,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Special characters (CYR)
     [1] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, RDBRC_L, RDBRC_R,  CYR_CM,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,         KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, RDBRC_L, RDBRC_R,CYR_QUES,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_EXLM,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
 
@@ -118,8 +118,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: Numpad
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COMM,          KC_DOT,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          KC_DOT,    KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         KC_COMM,    KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX,  KC_EQL,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
@@ -128,8 +128,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: Special characters (EN)
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,   PRCNT,   ATSGN, RDBRC_L, RDBRC_R, KC_COMM,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
-         XXXXXXX,   CARET,    NMBR, KC_LBRC, KC_RBRC, KC_QUES,         KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX,   PRCNT,   ATSGN, KC_LBRC, KC_RBRC, XXXXXXX,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+         XXXXXXX,   CARET,    NMBR, RDBRC_L, RDBRC_R, KC_QUES,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX,   AMPRD,    DLLR, KC_LCBR, KC_RCBR, KC_EXLM,           COLON, KC_SCLN, KC_QUOT,  D_QUOT, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX,  UNDRSC,         XXXXXXX, XXXXXXX, XXXXXXX
     )
