@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
-// Home row mods (mod-taps)
+// Home row mods (as Mod-Taps)
 #define HOME_A LCTL_T(KC_A)
 #define HOME_S LSFT_T(KC_S)
 #define HOME_D LOPT_T(KC_D)
@@ -134,4 +134,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                     XXXXXXX, XXXXXXX,   TO(0),         XXXXXXX, XXXXXXX, XXXXXXX
     )
 
+};
+
+
+
+
+// Mod-Tap: Cut, Copy and Paste with hold
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(0,KC_X):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(G(KC_X));
+                return false;
+            }
+            return true;
+        case LT(0,KC_C):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(G(KC_C));
+                return false;
+            }
+            return true;
+        case LT(0,KC_V):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(G(KC_V));
+                return false;
+            }
+            return true;
+    }
+    return true;
 };
