@@ -11,14 +11,14 @@
 #define HOME_L LSFT_T(KC_L)
 #define HOME_SC LCTL_T(KC_SCLN)
 
-#define LANG_P LCTL(KC_SPC) // macOS: Select the previous input source
-#define LANG_N LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
+#define LANG LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
 #define EMOJI LCTL(LCMD(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
 #define DND HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
 #define SPC_L LCTL(KC_LEFT) // macOS: Shortcut for move right a space
 #define SPC_R LCTL(KC_RGHT) // macOS: Shortcut for move left a space
 #define MCTRL HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define ALFRD HYPR(KC_S) // macOS: Shortcut for Alfred
+#define ONEP HYPR(KC_T) // macOS: Shortcut for 1Password
 
 #define RDBRC_L LSFT(KC_9) // Left round bracket
 #define RDBRC_R LSFT(KC_0) // Right round bracket
@@ -108,10 +108,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Arrows and macOS-specific controls
     [2] = LAYOUT_split_3x6_3(
 
-             DND,   TAB_P,   TAB_N,   KC_UP,   ALFRD,  LANG_N,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+             DND,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                     KC_ENT, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,  KC_TAB
+                                     KC_ENT, XXXXXXX, XXXXXXX,            LANG, XXXXXXX,  KC_TAB
 
     ),
     
