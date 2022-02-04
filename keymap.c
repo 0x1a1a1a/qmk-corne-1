@@ -1,6 +1,8 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
+
+
 // Home row mods (as Mod-Taps)
 #define HOME_A LCTL_T(KC_A)
 #define HOME_S LSFT_T(KC_S)
@@ -89,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
          XXXXXXX, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT,  UNDRSC, XXXXXXX,
-                                      TO(0), XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
 
     ),
 
@@ -108,10 +110,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Arrows and macOS-specific controls
     [2] = LAYOUT_split_3x6_3(
 
-             DND,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+         XXXXXXX,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,             DND, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                     KC_ENT, XXXXXXX,   TO(0),            LANG, XXXXXXX,  KC_TAB
+                                     KC_ENT,  KC_SPC,   TO(0),            LANG, KC_BSPC,  KC_TAB
 
     ),
     
@@ -121,17 +123,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_PLUS,    KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_MINS,    KC_4,    KC_5,    KC_6, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_EQL,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,           TO(0),  KC_DOT, KC_COMM
+                                    XXXXXXX,  KC_SPC,   TO(0),           TO(0), KC_BSPC, KC_COMM
 
     ),
 
     // RIGHT SIDE MOD: Special characters (EN)
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,   PRCNT, KC_LBRC,   ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+         XXXXXXX,   DLLR, KC_LBRC,    ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
          XXXXXXX,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, KC_LCBR,    DLLR,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,   TO(0)
+         XXXXXXX, XXXXXXX, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
+                                    XXXXXXX,  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC,   TO(0)
     )
 
 };
