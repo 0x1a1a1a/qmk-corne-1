@@ -20,7 +20,7 @@
 #define SPC_R LCTL(KC_RGHT) // macOS: Shortcut for move left a space
 #define MCTRL HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define ALFRD HYPR(KC_S) // macOS: Shortcut for Alfred
-#define ONEP HYPR(KC_T) // macOS: Shortcut for 1Password
+#define 1PASS HYPR(KC_T) // macOS: Shortcut for 1Password
 
 #define RDBRC_L LSFT(KC_9) // Left round bracket
 #define RDBRC_R LSFT(KC_0) // Right round bracket
@@ -88,9 +88,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,            LANG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
-         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-             DND, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+          KC_ESC, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX,   LANG,            ALFRD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           1PASS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+             DND,   TAB_P,   TAB_N,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                      KC_ENT,  KC_SPC,   TO(0),           TO(2), KC_BSPC,  KC_TAB
 
     ),
