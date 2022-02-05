@@ -64,7 +64,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /*
-    // EMPTY
+    // EMPTY TEMPLATE
     [N] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -81,60 +81,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
          XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
-                                      TO(1),  KC_SPC,   TO(2),           TO(3), KC_BSPC,   TO(4)
+                                    XXXXXXX,  KC_SPC,   TO(0),           TO(1), KC_BSPC,   TO(3)
 
     ),
 
-    // LEFT SIDE MOD: Special characters (CYR)
+    // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
-         XXXXXXX, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT,  UNDRSC, XXXXXXX,
-                                      TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
+          KC_ESC,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,            LANG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+             DND, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+                                     KC_ENT,  KC_SPC,   TO(0),           TO(2), KC_BSPC,  KC_TAB
 
     ),
 
-/*
-    // LEFT SIDE MOD: M_ENT, Mouse keys, system and RGB controls
-    [1] = LAYOUT_split_3x6_3(
-
-         XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG,         XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX,
-         XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD,         XXXXXXX, KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX, XXXXXXX,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         KC_BTN1, KC_BTN2, KC_BTN3
-
-    ),
-*/
-
-    // LEFT SIDE MOD: Arrows and macOS-specific controls
+    // NUMPAD   
     [2] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,             DND, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
-         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-         XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                     KC_ENT,  KC_SPC,   TO(0),            LANG, KC_BSPC,  KC_TAB
-
-    ),
-    
-    // RIGHT SIDE MOD: Numpad
-    [3] = LAYOUT_split_3x6_3(
-
-          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_PLUS,    KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_MINS,    KC_4,    KC_5,    KC_6, XXXXXXX, XXXXXXX,
+          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_PLUS,    KC_7,    KC_8,    KC_9,  KC_DOT, XXXXXXX,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_MINS,    KC_4,    KC_5,    KC_6, KC_COMM, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_EQL,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
-                                    XXXXXXX,  KC_SPC,   TO(0),           TO(0), KC_BSPC, KC_COMM
+                                     KC_ENT,  KC_SPC,   TO(0),           TO(3), KC_BSPC, XXXXXXX
 
     ),
 
-    // RIGHT SIDE MOD: Special characters (EN)
-    [4] = LAYOUT_split_3x6_3(
+    // SPECIAL CHARACTERS: LATIN
+    [3] = LAYOUT_split_3x6_3(
 
           KC_ESC,   DLLR, KC_LBRC,    ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
          XXXXXXX,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
-                                    XXXXXXX,  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC,   TO(0)
+                                     KC_ENT,  KC_SPC,   TO(0),           TO(4), KC_BSPC, XXXXXXX
     )
+
+    // SPECIAL CHARACTERS: CYRILLIC
+    [4] = LAYOUT_split_3x6_3(
+
+          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
+         XXXXXXX, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT,  UNDRSC, XXXXXXX,
+                                     KC_ENT,  KC_SPC,   TO(0),           TO(5), KC_BSPC, XXXXXXX
+
+    ),
 
 };
 
