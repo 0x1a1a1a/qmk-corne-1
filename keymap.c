@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
          XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
-                                    XXXXXXX,  KC_SPC,   TO(0),           TO(1), KC_BSPC,   TO(3)
+                                      TO(0),  KC_SPC,   TO(1),           TO(3), KC_BSPC, XXXXXXX
 
     ),
 
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX,   LANG,            ALFRD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           1PASS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
              DND,   TAB_P,   TAB_N,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                     KC_ENT,  KC_SPC,   TO(0),           TO(2), KC_BSPC,  KC_TAB
+                                      TO(0),  KC_SPC,   TO(2),           TO(3), KC_BSPC,  KC_ENT
 
     ),
 
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_PLUS,    KC_7,    KC_8,    KC_9,  KC_DOT, XXXXXXX,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_MINS,    KC_4,    KC_5,    KC_6, KC_COMM, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_EQL,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
-                                     KC_ENT,  KC_SPC,   TO(0),           TO(3), KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(3),           TO(3), KC_BSPC,  KC_ENT
 
     ),
 
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,   DLLR, KC_LBRC,    ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
          XXXXXXX,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
-                                     KC_ENT,  KC_SPC,   TO(0),           TO(4), KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(4),           TO(4), KC_BSPC,  KC_ENT
     ),
 
     // SPECIAL CHARACTERS: CYRILLIC
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II,  CYR_II, XXXXXXX,
          XXXXXXX, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT,  UNDRSC, XXXXXXX,
-                                     KC_ENT,  KC_SPC,   TO(0),           TO(5), KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,  KC_ENT
 
     )
 
