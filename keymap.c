@@ -110,11 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT SIDE MOD: Arrows and macOS-specific controls
     [2] = LAYOUT_split_3x6_3(
 
-<<<<<<< HEAD
           KC_ESC,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,             DND, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
-=======
-         XXXXXXX,   TAB_P,   TAB_N,   KC_UP,    ONEP,   ALFRD,             DND, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
->>>>>>> 017bac1edce84bf9f1541ad6b229cc45e3b12ac6
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
          XXXXXXX, XXXXXXX, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                      KC_ENT,  KC_SPC,   TO(0),            LANG, KC_BSPC,  KC_TAB
@@ -134,11 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT SIDE MOD: Special characters (EN)
     [4] = LAYOUT_split_3x6_3(
 
-<<<<<<< HEAD
           KC_ESC,   DLLR, KC_LBRC,    ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
-=======
-         XXXXXXX,   DLLR, KC_LBRC,    ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
->>>>>>> 017bac1edce84bf9f1541ad6b229cc45e3b12ac6
          XXXXXXX,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
                                     XXXXXXX,  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC,   TO(0)
