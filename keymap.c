@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT,  UNDRSC, XXXXXXX,
                                      KC_ENT,  KC_SPC,   TO(0),           TO(4), KC_BSPC, XXXXXXX
-    )
+    ),
 
     // SPECIAL CHARACTERS: CYRILLIC
     [4] = LAYOUT_split_3x6_3(
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT,  UNDRSC, XXXXXXX,
                                      KC_ENT,  KC_SPC,   TO(0),           TO(5), KC_BSPC, XXXXXXX
 
-    ),
+    )
 
 };
 
