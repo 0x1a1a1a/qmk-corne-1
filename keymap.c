@@ -62,7 +62,7 @@
 
 #define CMDZ LCMD(KC_Z) // Redo
 #define CMDX LCMD(KC_X) // Cut
-#define CMDC LCMD(KC_Z) // Copy
+#define CMDC LCMD(KC_C) // Copy
 #define CMDV LCMD(KC_V) // Paste
 
 
@@ -93,9 +93,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   LANG,            ONEPS,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
-          KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDC,   ALFRD,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,            ALFRD,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
+          KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDC,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                       TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
 
     ),
