@@ -18,5 +18,5 @@ RGB_MATRIX_ENABLE = yes
 RGBLIGHT_ENABLE = no
 SPACE_CADET_ENABLE = no     # Save space: Disable Space Cadet (https://docs.qmk.fm/#/feature_space_cadet)
 SWAP_HANDS_ENABLE = no      # Save space: One-hand typing
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no       # Save space: Disable Tap Dance
 UNICODE_ENABLE = no

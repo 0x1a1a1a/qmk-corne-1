@@ -93,9 +93,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,            ALFRD,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
+          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,           ALFRD,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
           KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDC,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
                                       TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
 
     ),
@@ -128,62 +128,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(0)
     )
 
-};
-
-
-
-
-// Mod-Tap: Cut, Copy and Paste with hold
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(0,KC_X):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_X));
-                return false;
-            }
-            return true;
-        case LT(0,KC_C):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_C));
-                return false;
-            }
-            return true;
-        case LT(0,KC_V):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_V));
-                return false;
-            }
-            return true;
-    }
-    return true;
-};
-
-
-enum {
-    CT_SE,
-    CT_CLN,
-    CT_EGG,
-    CT_FLSH,
-    X_TAP_DANCE
-};
-
-void dance_cln_finished(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-        register_code16(KC_COLN);
-    } else {
-        register_code(KC_SCLN);
-    }
-}
-
-void dance_cln_reset(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-        unregister_code16(KC_COLN);
-    } else {
-        unregister_code(KC_SCLN);
-    }
-}
-
-// All tap dance functions would go here. Only showing this one.
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [CT_CLN] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_cln_finished, dance_cln_reset),
 };
