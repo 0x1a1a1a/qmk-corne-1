@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,           ALFRD,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
           KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
           KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                      TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(0),            UDOT, KC_BSPC, XXXXXXX
 
     ),
 
@@ -129,3 +129,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 
 };
+
+
+
+
+// Unicode setup
+
+#ifdef UNICODE_ENABLE
+    set_unicode_input_mode(UC_MAC);
+#endif
+
+#ifdef UNICODE_ENABLE
+    case UDOT:
+        if (record->event.pressed) {
+            unicode_input_start();
+            register_hex(0x003f);
+            unicode_input_finish();
+        }
+    }
+    return false;
+    break;
+#endif
