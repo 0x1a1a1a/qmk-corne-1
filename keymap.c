@@ -60,6 +60,13 @@
 #define CYR_QT LOPT(KC_O) // Cyrillic: Quote
 #define CYR_DQT LSFT(KC_2) // Cyrillic: Double quote
 
+#define CMDZ LCMD(KC_Z) // Redo
+#define CMDX LCMD(KC_X) // Cut
+#define CMDC LCMD(KC_Z) // Copy
+#define CMDV LCMD(KC_V) // Paste
+
+
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -86,10 +93,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX,   LANG,            ALFRD,     DND, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
-          KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,   TAB_P,   TAB_N,   SPC_L,   MCTRL,   SPC_R,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                    XXXXXXX,  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
+          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   LANG,            ONEPS,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
+          KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDC,   ALFRD,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+                                      TO(0),  KC_SPC,   TO(0),         XXXXXXX, KC_BSPC, XXXXXXX
 
     ),
 
@@ -99,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_PLUS,    KC_7,    KC_8,    KC_9,  KC_DOT, XXXXXXX,
           KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_MINS,    KC_4,    KC_5,    KC_6, KC_COMM, XXXXXXX,
           KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_EQL,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
-                                    XXXXXXX,  KC_SPC, XXXXXXX,           TO(0), KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC, XXXXXXX,           TO(0), KC_BSPC, XXXXXXX
 
     ),
 
@@ -109,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,   DLLR,  KC_LBRC,   ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
           KC_ENT,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
           KC_TAB,  UNDRSC, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT, XXXXXXX, XXXXXXX,
-                                    XXXXXXX,  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(4)
+                                      TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(4)
     ),
 
     // SPECIAL CHARACTERS: CYRILLIC
@@ -118,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II, XXXXXXX, XXXXXXX,
           KC_ENT, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
           KC_TAB,  UNDRSC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT, XXXXXXX, XXXXXXX,
-                                    XXXXXXX,  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(0)
+                                      TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(0)
     )
 
 };
