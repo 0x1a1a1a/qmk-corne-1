@@ -65,7 +65,11 @@
 #define CMDC LCMD(KC_C) // Copy
 #define CMDV LCMD(KC_V) // Paste
 
-
+// Unicode definitions
+enum custom_keycodes {
+    U_PRD,
+    U_PRDD
+};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -83,10 +87,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MAIN                            
     [0] = LAYOUT_split_3x6_3(
 
-          KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  CYR_KH,
+          KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
           KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
-          KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_GRV,
-                                    XXXXXXX,  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
+          KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
+                                    KC_MINS,  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
 
@@ -96,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,           ALFRD,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
           KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
           KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
-                                      TO(0),  KC_SPC,   TO(0),            UDOT, KC_BSPC, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(0),           U_PRD, KC_BSPC,  U_PRDD
 
     ),
 
@@ -113,18 +117,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS: LATIN
     [3] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   DLLR,  KC_LBRC,   ATSGN,    NMBR, KC_RBRC,          KC_DOT,  KC_GRV, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
-          KC_ENT,   CARET, RDBRC_L, KC_EXLM, KC_QUES, RDBRC_R,         KC_COMM, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
-          KC_TAB,  UNDRSC, KC_LCBR,   PRCNT,   AMPRD, KC_RCBR,           COLON, KC_SCLN, KC_QUOT,  D_QUOT, XXXXXXX, XXXXXXX,
+          KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_EXLM,          KC_GRV, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
+          KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_QUES,           COLON, KC_QUOT, KC_SLSH, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,         KC_SCLN,  D_QUOT, KC_BSLS, XXXXXXX, XXXXXXX, XXXXXXX,
                                       TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(4)
     ),
 
     // SPECIAL CHARACTERS: CYRILLIC
     [4] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          CYR_PD,  KC_GRV,  CYR_KH,  CYR_II, XXXXXXX, XXXXXXX,
-          KC_ENT, XXXXXXX, RDBRC_L,CYR_EXLM,CYR_QUES, RDBRC_R,          CYR_CM, KC_MINS,   NDASH,   MDASH,   CYR_E, XXXXXXX,
-          KC_TAB,  UNDRSC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         CYR_CLN,CYR_SCLN,  CYR_QT, CYR_DQT, XXXXXXX, XXXXXXX,
+          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_EXLM,         KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,         CYR_CLN,  CYR_QT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        CYR_SCLN, CYR_DQT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                       TO(0),  KC_SPC, XXXXXXX,         XXXXXXX, KC_BSPC,   TO(0)
     )
 
@@ -135,18 +139,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Unicode setup
 
-#ifdef UNICODE_ENABLE
-    set_unicode_input_mode(UC_MAC);
-#endif
+// #ifdef UNICODE_ENABLE
+//     set_unicode_input_mode(UC_MAC);
+//     case U_PRD:
+//         if (record->event.pressed) {
+//             unicode_input_start();
+//             register_hex(0x003f);
+//             unicode_input_finish();
+//         }
+//     return false;
+// #endif
 
-#ifdef UNICODE_ENABLE
-    case UDOT:
-        if (record->event.pressed) {
+/* bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case U_PRD:
             unicode_input_start();
-            register_hex(0x003f);
+            send_unicode_string(".");
             unicode_input_finish();
-        }
+            return false;
+            break;
+        case U_PRDD:
+            send_unicode_string(".");
+            return false;
+            break;
     }
-    return false;
-    break;
-#endif
+    return true;
+} */
