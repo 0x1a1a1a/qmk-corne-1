@@ -44,5 +44,5 @@
 
 #ifdef UNICODE_ENABLE
     #define UNICODE_SELECTED_MODES UC_MAC
-    #define UNICODE_KEY_MAC KC_RALT
+    // #define UNICODE_KEY_MAC KC_RALT
 #endif

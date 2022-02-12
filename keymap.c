@@ -65,10 +65,12 @@
 #define CMDC     LCMD(KC_C) // Copy
 #define CMDV     LCMD(KC_V) // Paste
 
-// Unicode definitions
-enum custom_keycodes {
-    U_PRD,
-    U_QUES,
+enum unicode_names {
+    QUES
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+    [QUES]  = 0x003F,
 };
 
 
@@ -126,56 +128,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS: CYRILLIC
     [4] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_EXLM,         KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_EXLM,          KC_GRV, KC_MINS,   NDASH,   MDASH, XXXXXXX, XXXXXXX,
           KC_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,CYR_QUES,         CYR_CLN,  CYR_QT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        CYR_SCLN, CYR_DQT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, X(QUES),        CYR_SCLN, CYR_DQT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                       TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC, XXXXXXX
     )
 
 };
-
-
-// Unicode setup
-// #ifdef UNICODE_ENABLE
-//     set_unicode_input_mode(UC_MAC);
-//     case U_PRD:
-//         if (record->event.pressed) {
-//             unicode_input_start();
-//             register_hex(0x003f);
-//             unicode_input_finish();
-//         }
-//     return false;
-// #endif
-
-// According to https://www.reddit.com/r/olkb/comments/oi8grk/qmk_unicode_characters_arent_the_correct_number/
-/* bool process_record_user(uint16_t keycode, keyrecord_t* record) { 
-    switch (keycode) {
-        case U_PRD:
-            unicode_input_start();
-            send_unicode_string(".");
-            unicode_input_finish();
-            return false;
-            break;
-        case U_PRDD:
-            send_unicode_string(".");
-            return false;
-            break;
-    }
-    return true;
-} */
-
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case U_QUES:
-            unicode_input_start();
-            if (record->event.pressed)
-            {
-               unicode_input_start();
-               register_code(KC_TAB);
-            }
-            else { return false; }
-        break;
-  }
-  return true;
-}
