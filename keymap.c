@@ -65,13 +65,7 @@
 #define CMDC     LCMD(KC_C) // Copy
 #define CMDV     LCMD(KC_V) // Paste
 
-enum unicode_names {
-    QUES
-};
 
-const uint32_t PROGMEM unicode_map[] = {
-    [QUES]  = 0x003F,
-};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
