@@ -42,12 +42,6 @@
 #define SS_F_A   LSFT(LCMD(KC_4)) // macOS: Save picture of selected area as a file
 #define SS_F_S   LSFT(LCMD(KC_3)) // macOS: Save picture of screen as a file
 
-#define TAB_N    LCMD(LSFT(KC_RBRC)) // Chrome: Next tab
-#define TAB_P    LCMD(LSFT(KC_LBRC)) // Chrome: Previous tab
-
-#define M_ENT    LT(1, KC_ENT) // Momentarily activates Layer 2 when held, and sends Enter when tapped
-#define M_TAB    LT(4, KC_TAB) // Momentarily activates Layer 4 when held, and sends Tab when tapped
-
 #define CYR_CM   LSFT(KC_SLSH) // Cyrillic: Comma
 #define CYR_PD   KC_SLSH // Cyrillic: Period
 #define CYR_E    KC_QUOT // Cyrillic: E
@@ -57,7 +51,7 @@
 #define CYR_QUES LSFT(KC_7) // Cyrillic: Question mark
 #define CYR_CLN  LSFT(KC_6) // Cyrillic: Colon
 #define CYR_SCLN LSFT(KC_4) // Cyrillic: Semicolon
-#define CYR_QT   LOPT(KC_O) // Cyrillic: Quote
+#define CYR_QT   LOPT(KC_P) // Cyrillic: Quote
 #define CYR_DQT  LSFT(KC_2) // Cyrillic: Double quote
 
 #define CMDZ     LCMD(KC_Z) // Redo
@@ -93,9 +87,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         KC_MINS,     DND,   TAB_P,   TAB_N, XXXXXXX, KC_MUTE,
+          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         KC_MINS,     DND,  SS_OPT,  SS_C_A,  SS_C_S, KC_MUTE,
           KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,          SS_OPT,  SS_C_A,  SS_C_S,  SS_F_A,  SS_F_S, KC_VOLD,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_F_A,  SS_F_S, KC_VOLD,
                                       TO(0),  KC_SPC, XXXXXXX,           TO(2), KC_BSPC,   TO(3)
 
     ),
