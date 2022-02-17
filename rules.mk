@@ -22,6 +22,7 @@ OLED_DRIVER_ENABLE =     no           # Save space: OLED
 RGB_MATRIX_ENABLE =      yes          # Correct LED lightning mode
 RGBLIGHT_ENABLE =        no           # Incorect LED lightning mode
 SPACE_CADET_ENABLE =     no           # Save space: Space Cadet (https://docs.qmk.fm/#/feature_space_cadet)
+SPLIT_KEYBOARD =         yes
 SWAP_HANDS_ENABLE =      no           # Save space: One-hand typing
 TAP_DANCE_ENABLE =       no           # Save space: Tap Dance (https://docs.qmk.fm/#/feature_tap_dance)
 UNICODE_ENABLE =         no           # Save space: Unicode support (https://docs.qmk.fm/#/feature_unicode)
