@@ -80,16 +80,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
           KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
           KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
-                                    XXXXXXX,  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
+                                       LANG,  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
 
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC,   MCTRL,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         KC_MINS,     DND,  SS_OPT,  SS_C_A,  SS_C_S, KC_MUTE,
+          KC_ESC, XXXXXXX,   SPC_L,   KC_UP,   SPC_R,   MCTRL,         KC_MINS,     DND,  SS_OPT,  SS_C_A,  SS_C_S, KC_MUTE,
           KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,    LANG,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_F_A,  SS_F_S, KC_VOLD,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_F_A,  SS_F_S, KC_VOLD,
                                       TO(0),  KC_SPC, XXXXXXX,           TO(2), KC_BSPC,   TO(3)
 
     ),
@@ -97,10 +97,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // NUMPAD       
     [2] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR,         KC_MINS,    KC_7,    KC_8,    KC_9,  KC_DOT, XXXXXXX,
-          KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F, KC_SLSH,         KC_PLUS,    KC_4,    KC_5,    KC_6, KC_COMM, XXXXXXX,
-          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_EQL,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
-                                      TO(0),  KC_SPC,   TO(1),         XXXXXXX, KC_BSPC,   TO(3)
+          KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_7,    KC_8,    KC_9, KC_PLUS, KC_MINS,  KC_DOT,
+          KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,            KC_4,    KC_5,    KC_6, KC_ASTR, KC_SLSH, KC_COMM,
+          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,  KC_EQL,
+                                      TO(0),  KC_SPC,   TO(1),            KC_0, KC_BSPC,   TO(3)
 
     ),
 
