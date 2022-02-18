@@ -3,8 +3,8 @@
 
 APPLE_FN_ENABLE =        yes
 AUDIO_ENABLE =           no           # Save space: Audio output (port C6)
-BACKLIGHT_ENABLE =       yes          # Backlight
-BACKLIGHT_DRIVER =       pwm
+# BACKLIGHT_ENABLE =     yes          # Backlight
+# BACKLIGHT_DRIVER =     pwm
 BLUETOOTH_ENABLE =       no           # Save space: Bluetooth
 BOOTLOADER      =        atmel-dfu    # Bootloader for Corne's R2G ATmega32U4
 COMMAND_ENABLE =         no           # Save space: Commands for debug and configuration (https://docs.qmk.fm/#/feature_command)
@@ -19,7 +19,7 @@ MIDI_ENABLE =            no           # Save space: MIDI controls
 MOUSEKEY_ENABLE =        no           # Save space: Mouse keys
 NKRO_ENABLE =            no           # Save space: NKRO (6KRO seems enough)
 OLED_DRIVER_ENABLE =     no           # Save space: OLED
-RGB_MATRIX_ENABLE =      yes          # Correct LED lightning mode
+RGB_MATRIX_ENABLE =      no           # Save space: Correct LED lightning mode
 RGBLIGHT_ENABLE =        no           # Incorect LED lightning mode
 SPACE_CADET_ENABLE =     no           # Save space: Space Cadet (https://docs.qmk.fm/#/feature_space_cadet)
 SPLIT_KEYBOARD =         yes
