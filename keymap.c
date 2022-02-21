@@ -13,14 +13,24 @@
 #define HOME_L   LSFT_T(KC_L)
 #define HOME_SC  LCTL_T(KC_SCLN)
 
+
 #define LANG     LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
 #define EMOJI    LCTL(LCMD(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
 #define DND      HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
-#define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
-#define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
-#define MCTRL    HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define ALFRD    HYPR(KC_S) // macOS: Shortcut for Alfred
 #define ONEPS    HYPR(KC_T) // macOS: Shortcut for 1Password
+
+
+#define MCTRL    HYPR(KC_V) // macOS: Shortcut for Mission Control
+#define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
+#define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
+#define DSK1     HYPR(KC_Y) // macOS: Switch to Desktop 1
+#define DSK2     HYPR(KC_U) // macOS: Switch to Desktop 2
+#define DSK3     HYPR(KC_I) // macOS: Switch to Desktop 3
+#define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
+#define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
+#define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
+
 
 #define RDBRC_L  LSFT(KC_9) // Left round bracket
 #define RDBRC_R  LSFT(KC_0) // Right round bracket
@@ -36,11 +46,13 @@
 #define CARET    LSFT(KC_6) // Caret
 #define AMPRD    LSFT(KC_7) // Ampersand
 
+
 #define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
 #define SS_C_A   LCTL(LSFT(LCMD(KC_4))) // macOS: Copy picture of selected area to the clipboard
 #define SS_C_S   LCTL(LSFT(LCMD(KC_3))) // macOS: Copy picture of screen to the clipboard
 #define SS_F_A   LSFT(LCMD(KC_4)) // macOS: Save picture of selected area as a file
 #define SS_F_S   LSFT(LCMD(KC_3)) // macOS: Save picture of screen as a file
+
 
 #define CYR_CM   LSFT(KC_SLSH) // Cyrillic: Comma
 #define CYR_PD   KC_SLSH // Cyrillic: Period
@@ -53,6 +65,7 @@
 #define CYR_SCLN LSFT(KC_4) // Cyrillic: Semicolon
 #define CYR_QT   LOPT(KC_P) // Cyrillic: Quote
 #define CYR_DQT  LSFT(KC_2) // Cyrillic: Double quote
+
 
 #define CMDZ     LCMD(KC_Z) // Redo
 #define CMDX     LCMD(KC_X) // Cut
@@ -87,10 +100,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS AND MACOS-SPECIFIC CONTROLS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX,   SPC_L,   KC_UP,   SPC_R,   MCTRL,         KC_MINS,     DND,  SS_OPT,  SS_C_A,  SS_C_S, KC_MUTE,
-          KC_ENT, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_F_A,  SS_F_S, KC_VOLD,
-                                      TO(0),  KC_SPC, XXXXXXX,           TO(2), KC_BSPC,   TO(3)
+          KC_ESC,     DND,   SPC_L,   KC_UP,   SPC_R,   MCTRL,            DSK1,    DSK2,    DSK3,    DSK4,    DSK5, KC_MUTE,
+          KC_ENT,  SS_OPT, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+          KC_TAB,    CMDZ,    CMDX,    CMDC,    CMDV,   ONEPS,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
+                                      TO(0),  KC_SPC,   ALFRD,           TO(2), KC_BSPC,   TO(3)
 
     ),
 
