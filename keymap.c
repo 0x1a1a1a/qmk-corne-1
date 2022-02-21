@@ -1,7 +1,14 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
+/*
 
+Next steps
+      - Implement Unicode support for special characters to use one layer for latin and cyrillic special characters
+      - 
+      - 
+
+*/
 
 // Home row mods (as Mod-Taps)
 #define HOME_A   LCTL_T(KC_A)
