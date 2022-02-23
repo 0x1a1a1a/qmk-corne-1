@@ -117,8 +117,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS
     [2] = LAYOUT_split_3x6_3(
 
-          KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_EXLM,        CYR_EXLM, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
-          KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_QUES,        CYR_QUES, KC_MINS,   NDASH,   MDASH,  CYR_QT, KC_SLSH,
+          KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_QUES,        CYR_QUES, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
+          KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_EXLM,        CYR_EXLM, KC_MINS,   NDASH,   MDASH,  CYR_QT, KC_SLSH,
           KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,            LANG,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN, KC_BSLS,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
     ),
