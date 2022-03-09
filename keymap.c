@@ -4,7 +4,7 @@
 /*
 
 Next steps
-      - Implement Unicode support for special characters to use one layer for latin and cyrillic special characters
+      - 
       - 
       - 
 
@@ -35,8 +35,10 @@ Next steps
 #define DSK2     HYPR(KC_U) // macOS: Switch to Desktop 2
 #define DSK3     HYPR(KC_I) // macOS: Switch to Desktop 3
 #define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
-#define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
+// #define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
 // #define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
+#define LANG_US  HYPR(KC_B) // macOS: Set input source to U.S.
+#define LANG_UA  HYPR(KC_N) // macOS: Set input source to Ukrainian - PC
 
 
 #define RDBRC_L  LSFT(KC_9) // Left round bracket
@@ -109,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
           KC_ESC, XXXXXXX,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND, KC_MUTE,
           KC_ENT,   MCTRL, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    DSK1,    DSK2,    DSK3,    DSK4,    DSK5,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,   ONEPS, KC_VOLD,
+          KC_TAB,    DSK1,    DSK2,    DSK3,    DSK4, LANG_US,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,   ONEPS, KC_VOLD,
                                       TO(0),  KC_SPC, XXXXXXX,           MO(2), KC_BSPC,   TO(3)
 
     ),
@@ -119,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
           KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_QUES,        CYR_QUES, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
           KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_EXLM,        CYR_EXLM, KC_MINS,   NDASH,   MDASH,  CYR_QT, KC_SLSH,
-          KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,            LANG,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN, KC_BSLS,
+          KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,         LANG_UA,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN, KC_BSLS,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
