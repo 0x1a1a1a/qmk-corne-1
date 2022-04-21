@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
           KC_ESC, XXXXXXX,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND, KC_MUTE,
           KC_ENT,   MCTRL, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    DSK1,    DSK2,    DSK3,    DSK4, LANG_US,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,   ONEPS, KC_VOLD,
+          KC_TAB,    DSK1,    DSK2,    DSK3,   ONEPS, LANG_US,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, XXXXXXX, KC_VOLD,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
