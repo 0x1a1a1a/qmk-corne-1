@@ -31,10 +31,10 @@ Next steps
 #define MCTRL    HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
 #define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
-#define DSK1     HYPR(KC_Y) // macOS: Switch to Desktop 1
-#define DSK2     HYPR(KC_U) // macOS: Switch to Desktop 2
-#define DSK3     HYPR(KC_I) // macOS: Switch to Desktop 3
-#define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
+// #define DSK1     HYPR(KC_Y) // macOS: Switch to Desktop 1
+// #define DSK2     HYPR(KC_U) // macOS: Switch to Desktop 2
+// #define DSK3     HYPR(KC_I) // macOS: Switch to Desktop 3
+// #define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
 // #define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
 // #define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
 #define LANG_US  HYPR(KC_B) // macOS: Set input source to U.S.
@@ -100,9 +100,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MAIN                            
     [0] = LAYOUT_split_3x6_3(
 
-          KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
-          KC_ENT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
-          KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
+            KC_1,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
+            KC_2,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
+            KC_3,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
                                     XXXXXXX,  KC_SPC,   MO(1),           MO(3), KC_BSPC,   MO(2)
 
     ),
