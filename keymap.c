@@ -4,7 +4,7 @@
 /*
 
 Next steps
-      - 
+      - Set up direct language layout switches (currently: next/previous in list)
       - 
       - 
 
@@ -21,7 +21,6 @@ Next steps
 #define HOME_SC  LCTL_T(KC_SCLN)
 
 
-#define LANG     LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
 #define EMOJI    LCTL(LCMD(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
 #define DND      HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
 #define ALFRD    HYPR(KC_S) // macOS: Shortcut for Alfred
@@ -37,6 +36,7 @@ Next steps
 // #define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
 // #define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
 // #define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
+#define LANG     LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
 #define LANG_US  HYPR(KC_B) // macOS: Set input source to U.S.
 #define LANG_UA  HYPR(KC_N) // macOS: Set input source to Ukrainian - PC
 
@@ -97,33 +97,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 */
 
-    // MAIN                            
+    // MAIN
     [0] = LAYOUT_split_3x6_3(
 
             KC_1,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
             KC_2,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
             KC_3,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
-                                    XXXXXXX,  KC_SPC,   MO(1),           MO(3), KC_BSPC,   MO(2)
+                                      MO(1),  KC_SPC,   MO(2),           MO(3), KC_BSPC,   MO(4)
 
     ),
 
-    // ARROWS AND MACOS-SPECIFIC CONTROLS
+
+    // ARROWS
     [1] = LAYOUT_split_3x6_3(
 
-          KC_ESC, XXXXXXX,   SPC_L,   KC_UP,   SPC_R,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND, KC_MUTE,
-          KC_ENT,   MCTRL, KC_LEFT, KC_DOWN, KC_RGHT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-          KC_TAB,    DSK1,    DSK2,    DSK3,   ONEPS, LANG_US,         XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, XXXXXXX, KC_VOLD,
+         XXXXXXX, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
 
-    // SPECIAL CHARACTERS
+
+    // MACOS CONTROLS AND APPS
     [2] = LAYOUT_split_3x6_3(
 
-          KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_QUES,        CYR_QUES, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
-          KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_EXLM,        CYR_EXLM, KC_MINS,   NDASH,   MDASH, KC_SLSH, KC_BSLS,
-          KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,         LANG_UA,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN,   TILDE,
+             DND, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,           ONEPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
+         XXXXXXX, XXXXXXX , KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LANG_US,          SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+
     ),
 
     // NUMPAD       
@@ -134,6 +137,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX,  KC_EQL,
                                     XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
 
+    ),
+
+    // SPECIAL CHARACTERS
+    [4] = LAYOUT_split_3x6_3(
+
+          KC_ESC,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_QUES,        CYR_QUES, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
+          KC_ENT,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_EXLM,        CYR_EXLM, KC_MINS,   NDASH,   MDASH, KC_SLSH, KC_BSLS,
+          KC_TAB,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,         LANG_UA,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN,   TILDE,
+                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
     )
 
 };
