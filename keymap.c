@@ -103,49 +103,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_PSLS,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC,
          KC_PAST,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_QUOT,
          KC_PMNS,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RBRC,
-                                      MO(1),  KC_SPC,   MO(2),           MO(3), KC_BSPC,   MO(4)
+                                      TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
-
-
-    // ARROWS
-    [1] = LAYOUT_split_3x6_3(
-
-         XXXXXXX, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, XXXXXXX,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
-
-    ),
-
 
     // MACOS CONTROLS AND APPS
-    [2] = LAYOUT_split_3x6_3(
+    [1] = LAYOUT_split_3x6_3(
 
              DND, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,           ONEPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         XXXXXXX,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_F17,  KC_F16,          SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
 
     // NUMPAD       
-    [3] = LAYOUT_split_3x6_3(
+    [2] = LAYOUT_split_3x6_3(
 
            RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PLUS,    KC_7,    KC_8,    KC_9, KC_ASTR,  KC_DOT,
          XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         KC_MINS,    KC_4,    KC_5,    KC_6, KC_SLSH, KC_COMM,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX,  KC_EQL,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+                                      TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
 
-    // SPECIAL CHARACTERS
-    [4] = LAYOUT_split_3x6_3(
+    // ARROWS
+    [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,    DLLR, KC_LBRC,   ATSGN, KC_RBRC, KC_QUES,        CYR_QUES, KC_QUOT,  D_QUOT,   COLON, KC_SCLN,  KC_GRV,
-         XXXXXXX,   AMPRD, RDBRC_L,    NMBR, RDBRC_R, KC_EXLM,        CYR_EXLM, KC_MINS,   NDASH,   MDASH, KC_SLSH, KC_BSLS,
-         XXXXXXX,   CARET, KC_LCBR,   PRCNT, KC_RCBR,  UNDRSC,         LANG_UA,  CYR_QT, CYR_DQT, CYR_CLN,CYR_SCLN,   TILDE,
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                      TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
     )
 
 };
