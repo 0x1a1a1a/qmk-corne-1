@@ -37,8 +37,8 @@ Next steps
 // #define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
 // #define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
 #define LANG     LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
-#define LANG_US  HYPR(KC_B) // macOS: Set input source to U.S.
-#define LANG_UA  HYPR(KC_N) // macOS: Set input source to Ukrainian - PC
+#define LANG_US  KC_F16 // macOS: Set input source to English
+#define LANG_UA  KC_F17 // macOS: Set input source to Ukrainian
 
 
 #define RDBRC_L  LSFT(KC_9) // Left round bracket
@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
              DND, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,          SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,
          XXXXXXX, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLU,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_F16,          KC_F17, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LANG_US,         LANG_UA, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
                                       TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
