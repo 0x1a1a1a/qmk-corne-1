@@ -36,6 +36,7 @@
 #define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
 
 
+#define CMDA     LCMD(KC_A) // Select All
 #define CMDZ     LCMD(KC_Z) // Redo
 #define CMDX     LCMD(KC_X) // Cut
 #define CMDC     LCMD(KC_C) // Copy
@@ -70,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
 
              DND, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,          SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLU,
-         XXXXXXX, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLD,
+         XXXXXXX,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,           ONEPS,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_VOLD,
          KC_PMNS,    CMDZ,    CMDX,    CMDC,    CMDV, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RBRC,
                                       TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
