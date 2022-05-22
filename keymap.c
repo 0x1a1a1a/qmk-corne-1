@@ -17,23 +17,15 @@
 #define DND      HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
 #define ALFRD    HYPR(KC_S) // macOS: Shortcut for Alfred
 #define ONEPS    HYPR(KC_T) // macOS: Shortcut for 1Password
-
-
+#define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Shortcut for screenshot and recording options
 #define MCTRL    HYPR(KC_V) // macOS: Shortcut for Mission Control
 #define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
 #define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
-// #define DSK1     HYPR(KC_Y) // macOS: Switch to Desktop 1
-// #define DSK2     HYPR(KC_U) // macOS: Switch to Desktop 2
-// #define DSK3     HYPR(KC_I) // macOS: Switch to Desktop 3
-// #define DSK4     HYPR(KC_O) // macOS: Switch to Desktop 4
-// #define DSK5     HYPR(KC_P) // macOS: Switch to Desktop 5
-// #define DSK6     HYPR(KC_LBRC) // macOS: Switch to Desktop 6
+
+
 #define LANG     LCTL(LOPT(KC_SPC)) // macOS: Select next source in Input menu
 #define LANG_US  KC_F16 // macOS: Set input source to English
 #define LANG_UA  KC_F17 // macOS: Set input source to Ukrainian
-
-
-#define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Screenshot and recording options
 
 
 #define CMDA     LCMD(KC_A) // Select All
@@ -41,6 +33,14 @@
 #define CMDX     LCMD(KC_X) // Cut
 #define CMDC     LCMD(KC_C) // Copy
 #define CMDV     LCMD(KC_V) // Paste
+
+
+#define BRCLANG
+#define BRCLCUR
+#define SLSH
+#define BRCRANG
+#define BRCRCUR
+#define BSLSH
 
 
 
@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MACOS CONTROLS AND APPS
     [1] = LAYOUT_split_3x6_3(
 
-         XXXXXXX,     DND,   SPC_L,   MCTRL,   SPC_R,   ONEPS,         KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, SS_OPT,
+         KC_LBRC, KC_LBRC,   SPC_L,   MCTRL,   SPC_R,   ONEPS,         KC_MUTE,     DND, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC,
          KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_RBRC,
-         XXXXXXX,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         KC_LBRC,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD,  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, KC_RBRC,
                                       TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
