@@ -35,12 +35,12 @@
 #define CMDV     LCMD(KC_V) // Paste
 
 
-#define BRCLANG
-#define BRCLCUR
-#define SLSH
-#define BRCRANG
-#define BRCRCUR
-#define BSLSH
+#define BRCLANG LSFT(KC_LBRC) // Left angle bracket (chevron)
+#define BRCRANG LSFT(KC_RBRC) // Right angle bracket (chevron)
+#define BRCLCUR LOPT(KC_LBRC) // Left curly bracket (brace)
+#define BRCRCUR LOPT(KC_RBRC)// Right curly bracket (brace)
+#define SLSH LSFT(LOPT(KC_LBRC)) // Slash
+#define BSLSH LSFT(LOPT(KC_RBRC)) // Backslash
 
 
 
@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MACOS CONTROLS AND APPS
     [1] = LAYOUT_split_3x6_3(
 
-         KC_LBRC, KC_LBRC,   SPC_L,   MCTRL,   SPC_R,   ONEPS,         KC_MUTE,     DND, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC,
+         BRCLCUR,    SLSH,   SPC_L,   MCTRL,   SPC_R,   ONEPS,         KC_MUTE,     DND, XXXXXXX, XXXXXXX,   BSLSH, BRCRCUR,
          KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_RBRC,
-         KC_LBRC,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD,  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, KC_RBRC,
+         BRCLANG,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD,  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, BRCRANG,
                                       TO(0),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(3)
 
     ),
