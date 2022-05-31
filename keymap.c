@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
 
          BRCLCUR,    SLSH,   SPC_L,   MCTRL,   SPC_R,   ONEPS,         KC_MUTE,     DND, XXXXXXX, XXXXXXX,   BSLSH, BRCRCUR,
-         KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU,  HOME_J,  HOME_K,  HOME_L, HOME_SC, KC_RBRC,
+         KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_RBRC,
          BRCLANG,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD,  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, BRCRANG,
                                     LLANGUS,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LLANGUA
 
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PLUS,    KC_7,    KC_8,    KC_9, KC_ASTR, KC_PPLS,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         KC_MINS,    KC_4,    KC_5,    KC_6,    SLSH, KC_QUOT,
+         XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,         KC_MINS,    KC_4,    KC_5,    KC_6,    SLSH, KC_QUOT,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            KC_0,    KC_1,    KC_2,    KC_3,  KC_ENT,  KC_EQL,
                                     LLANGUS,  KC_SPC,   TO(1),           TO(3), KC_BSPC, LLANGUA
 
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = LAYOUT_split_3x6_3(
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           RESET, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX,  HOME_A,  HOME_S,  HOME_D,  HOME_F, XXXXXXX,         XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
+         XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,         XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                     LLANGUS,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LLANGUA
     )
