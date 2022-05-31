@@ -1,11 +1,11 @@
 enum custom_keycodes {
-    LLANGUS = SAFE_RANGE,
-    LLANGUA,
+    LANG_US = SAFE_RANGE,
+    LANG_UA,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case LLANGUS:
+    case LANG_US:
         if (record->event.pressed) {
             layer_move(0);
             tap_code(KC_F16);
@@ -14,7 +14,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
     
-    case LLANGUA:
+    case LANG_UA:
         if (record->event.pressed) {
             layer_move(0);
             tap_code(KC_F17);
