@@ -65,9 +65,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MACOS CONTROLS AND APPS
     [1] = LAYOUT_split_3x6_3(
 
-         BRCLCUR,    SLSH,   SPC_L,   MCTRL,   SPC_R, XXXXXXX,         KC_MUTE,     DND, XXXXXXX, XXXXXXX,   BSLSH, BRCRCUR,
-         KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_RBRC,
-         BRCLANG,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_VOLD,  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, BRCRANG,
+         BRCLCUR,    SLSH,   SPC_L,   MCTRL,   SPC_R,  SS_OPT,         KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX,   BSLSH, BRCRCUR,
+         KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,             DND, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_RBRC,
+         BRCLANG,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,           KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5, BRCRANG,
                                     LANG_US,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     ),
