@@ -30,12 +30,12 @@
 #define CMDV     LCMD(KC_V) // Paste
 
 
-#define BRCLANG LSFT(KC_LBRC) // Left angle bracket (chevron)
-#define BRCRANG LSFT(KC_RBRC) // Right angle bracket (chevron)
-#define BRCLCUR LOPT(KC_LBRC) // Left curly bracket (brace)
-#define BRCRCUR LOPT(KC_RBRC) // Right curly bracket (brace)
-#define SLSH LSFT(LOPT(KC_LBRC)) // Slash
-#define BSLSH LSFT(LOPT(KC_RBRC)) // Backslash
+#define BRCLANG  LSFT(KC_LBRC) // Left angle bracket (chevron)
+#define BRCRANG  LSFT(KC_RBRC) // Right angle bracket (chevron)
+#define BRCLCUR  LOPT(KC_LBRC) // Left curly bracket (brace)
+#define BRCRCUR  LOPT(KC_RBRC) // Right curly bracket (brace)
+#define SLSH     LSFT(LOPT(KC_LBRC)) // Slash
+#define BSLSH    LSFT(LOPT(KC_RBRC)) // Backslash
 
 
 
