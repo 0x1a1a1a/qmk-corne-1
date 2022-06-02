@@ -23,11 +23,11 @@
 #define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
 
 
-#define CMDA     LCMD(KC_A) // Select All
-#define CMDZ     LCMD(KC_Z) // Redo
-#define CMDX     LCMD(KC_X) // Cut
-#define CMDC     LCMD(KC_C) // Copy
-#define CMDV     LCMD(KC_V) // Paste
+#define UNDO     LCMD(KC_Z) // Undo
+#define REDO     LCMD(LSFT(KC_Z)) // Redo
+#define CUT      LCMD(KC_X) // Cut
+#define COPY     LCMD(KC_C) // Copy
+#define PASTE    LCMD(KC_V) // Paste
 
 
 #define BRCLANG  LSFT(KC_LBRC) // Left angle bracket (chevron)
@@ -66,8 +66,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
 
          BRCLCUR,    SLSH,   SPC_L,   MCTRL,   SPC_R,  SS_OPT,         KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX,   BSLSH, BRCRCUR,
-         KC_LBRC,    CMDA,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,             DND, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_RBRC,
-         BRCLANG,    CMDZ,    CMDX,    CMDC,    CMDV,   ALFRD,         KC_SLEP, KC_BRID, KC_BRIU, XXXXXXX, XXXXXXX, BRCRANG,
+         KC_LBRC,    REDO,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,             DND, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_RBRC,
+         BRCLANG,    UNDO,     CUT,    COPY,   PASTE,   ALFRD,         KC_SLEP, KC_BRID, KC_BRIU, XXXXXXX, XXXXXXX, BRCRANG,
                                     LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     ),
