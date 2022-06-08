@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "macros.c"
+#include "letters_cyr.c"
 
 
 // Home row mods (as Mod-Taps)
