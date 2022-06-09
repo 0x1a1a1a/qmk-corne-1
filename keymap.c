@@ -31,13 +31,23 @@
 #define PASTE    LCMD(KC_V) // Paste
 
 
-#define BRCLANG  LSFT(KC_LBRC) // Left angle bracket (chevron)
-#define BRCRANG  LSFT(KC_RBRC) // Right angle bracket (chevron)
-#define BRCLCUR  LOPT(KC_LBRC) // Left curly bracket (brace)
-#define BRCRCUR  LOPT(KC_RBRC) // Right curly bracket (brace)
+#define L_ANG  LSFT(KC_LBRC) // Left angle bracket (chevron)
+#define R_ANG  LSFT(KC_RBRC) // Right angle bracket (chevron)
+#define L_CUR  LOPT(KC_LBRC) // Left curly bracket (brace)
+#define R_CUR  LOPT(KC_RBRC) // Right curly bracket (brace)
+#define L_SQR  KC_LBRC // Left square bracket
+#define R_SQR  KC_RBRC // Right square bracket
+
+
 #define SLSH     LSFT(LOPT(KC_LBRC)) // Slash
 #define BSLSH    LSFT(LOPT(KC_RBRC)) // Backslash
-
+#define ATSGN    LSFT(KC_2) // At sign
+#define NMBR     LSFT(KC_3) // Number sign
+#define DLLR     LSFT(KC_4) // Dollar sign
+#define PRCNT    LSFT(KC_5) // Percent sign
+#define CARET    LSFT(KC_6) // Caret
+#define AMPRD    LSFT(KC_7) // Ampersand
+#define UNDRSC   LSFT(KC_MINS) // Underscore
 
 
 
@@ -90,6 +100,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,         XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                     LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
+    ),-
+
+    // SPECIAL CHARACTERS
+    [4] = LAYOUT_split_3x6_3(
+         XXXXXXX, BRCLCUR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
     )
 
 };
