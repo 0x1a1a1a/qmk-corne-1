@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "macros.c"
-#include "letters_cyr.c"
+// #include "letters_cyr.c"
 
 
 // Home row mods (as Mod-Taps)
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX,   RESET,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,         XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
            TO(3), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   TO(4),
                                     LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
@@ -118,10 +118,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   L_CUR, XXXXXXX,         XXXXXXX,   R_CUR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   L_CUR, XXXXXXX,         XXXXXXX,   R_CUR, XXXXXXX, XXXXXXX, XXXXXXX,   RESET,
          XXXXXXX, XXXXXXX,   PRCNT,   ATSGN,   L_SQR,    SLSH,           BSLSH,   R_SQR,    NMBR,   CARET,  UNDRSC, XXXXXXX,
            TO(3), XXXXXXX, XXXXXXX,   AMPRD,   L_ANG, XXXXXXX,         XXXXXXX,   R_ANG,    DLLR, XXXXXXX, XXXXXXX,   TO(4),
-                                    XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     )
 
