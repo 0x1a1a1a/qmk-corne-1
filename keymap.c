@@ -31,6 +31,8 @@
 #define PASTE    LCMD(KC_V) // Paste
 
 
+#define L_RND    LSFT(KC_PPLS) // Left round bracket (parenthes)
+#define R_RND    LSFT(KC_QUOT) // Right round bracket (parenthes)
 #define L_ANG    LSFT(KC_LBRC) // Left angle bracket (chevron)
 #define R_ANG    LSFT(KC_RBRC) // Right angle bracket (chevron)
 #define L_CUR    LOPT(KC_LBRC) // Left curly bracket (brace)
@@ -39,10 +41,10 @@
 #define R_SQR    KC_RBRC // Right square bracket
 
 
-#define PERIOD   KC_QUOT // Period
-#define COMMA    KC_PPLS // Comma
 #define COLON    KC_PMNS // Colon
 #define HYPHEN   KC_PAST // Hyphen
+#define COMMA    KC_PPLS // Comma
+#define PERIOD   KC_QUOT // Period
 #define SLSH     LSFT(LOPT(KC_LBRC)) // Slash
 #define BSLSH    LSFT(LOPT(KC_RBRC)) // Backslash
 #define ATSGN    LSFT(KC_2) // At sign
@@ -118,8 +120,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   L_CUR, XXXXXXX,         XXXXXXX,   R_CUR, XXXXXXX, XXXXXXX, XXXXXXX,   RESET,
-         XXXXXXX, XXXXXXX,   PRCNT,   ATSGN,   L_SQR,    SLSH,           BSLSH,   R_SQR,    NMBR,   CARET,  UNDRSC, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   L_CUR,    SLSH,           BSLSH,   R_CUR, XXXXXXX, XXXXXXX, XXXXXXX,   RESET,
+         XXXXXXX, XXXXXXX,   PRCNT,   ATSGN,   L_RND,   L_SQR,           R_SQR,   R_RND,    NMBR,   CARET,  UNDRSC, XXXXXXX,
            TO(3), XXXXXXX, XXXXXXX,   AMPRD,   L_ANG, XXXXXXX,         XXXXXXX,   R_ANG,    DLLR, XXXXXXX, XXXXXXX,   TO(4),
                                     LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
