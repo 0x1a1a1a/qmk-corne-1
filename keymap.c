@@ -42,9 +42,28 @@
 
 
 #define COLON    KC_PMNS // Colon
+#define SMCOLON  // Semicolon
+#define APOSTR   // Apostrophe
+#define DQUOT    // Double quote
+#define RSQM     // Right Single Quotation Mark
+#define GACCENT  // Grave accent
+#define TILDE    // Tilde
+#define VLINE    // Vertical line
+
+#define MSIGN    // Multiplication sign
+#define BULLET   // Bullet
+
+
 #define HYPHEN   KC_PAST // Hyphen
+#define NDASH    // En Dash
+#define MDASH    // Em Dash
 #define COMMA    KC_PPLS // Comma
 #define PERIOD   KC_QUOT // Period
+#define QMARK    // Question mark
+#define EMARK    // Exclamation mark
+
+
+
 #define SLSH     LSFT(LOPT(KC_LBRC)) // Slash
 #define BSLSH    LSFT(LOPT(KC_RBRC)) // Backslash
 #define ATSGN    LSFT(KC_2) // At sign
@@ -54,6 +73,7 @@
 #define CARET    LSFT(KC_6) // Caret
 #define AMPRD    LSFT(KC_7) // Ampersand
 #define UNDRSC   LSFT(KC_MINS) // Underscore
+
 
 
 
@@ -76,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MAIN
     [0] = LAYOUT_split_3x6_3(
 
-           COLON,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
+            RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC,  PERIOD,
          LANG_EN,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, LANG_UA,
                                       TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
@@ -88,8 +108,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
 
             UNDO, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,         KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
-            REDO,     DND,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-         LANG_EN, XXXXXXX,  XXXXXXX,    CUT,    COPY,   PASTE,         KC_VOLD, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, LANG_UA,
+            REDO, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLU, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+         LANG_EN, XXXXXXX,     CUT,    COPY,   PASTE,     DND,         KC_VOLD, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, LANG_UA,
                                       TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
 
     ),
@@ -120,9 +140,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS
     [4] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   L_CUR,    SLSH,           BSLSH,   R_CUR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX, XXXXXXX,   PRCNT,   ATSGN,   L_RND,   L_SQR,           R_SQR,   R_RND,    NMBR,   CARET,  UNDRSC, XXXXXXX,
-         LANG_EN, XXXXXXX, XXXXXXX,   AMPRD,   L_ANG, XXXXXXX,         XXXXXXX,   R_ANG,    DLLR, XXXXXXX, XXXXXXX, LANG_UA,
+         GACCENT,   TILDE,   PRCNT,   L_SQR,   R_SQR,   NDASH,           MDASH,   L_CUR,   R_CUR,    NMBR,  APOSTR,   DQUOT,
+         XXXXXXX, XXXXXXX,   ATSGN,   L_RND,   R_RND,   QMARK,           EMARK,   L_ANG,   R_ANG,   CARET,   COLON, SMCOLON,
+         LANG_EN,   VLINE,   AMPRD,   MSIGN,  BULLET,    SLSH,           BSLSH, XXXXXXX, XXXXXXX,    DLLR,  UNDRSC, LANG_UA,
                                       TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
 
     )
