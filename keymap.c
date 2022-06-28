@@ -31,42 +31,42 @@
 #define PASTE    LCMD(KC_V) // Paste
 
 
-#define L_RND    LOPT(KC_Q) // Left round bracket (parenthes)
-#define R_RND    LOPT(KC_A) // Right round bracket (parenthes)
-#define L_SQR    LOPT(KC_W) // Left square bracket
-#define R_SQR    LOPT(KC_S) // Right square bracket
-#define L_ANG    LOPT(KC_E) // Left angle bracket (chevron)
-#define R_ANG    LOPT(KC_D) // Right angle bracket (chevron)
-#define L_CUR    LOPT(KC_R) // Left curly bracket (brace)
-#define R_CUR    LOPT(KC_F) // Right curly bracket (brace)
+#define L_RND    A(KC_Q) // Left round bracket (parenthes)
+#define R_RND    A(KC_A) // Right round bracket (parenthes)
+#define L_SQR    A(KC_W) // Left square bracket
+#define R_SQR    A(KC_S) // Right square bracket
+#define L_ANG    A(KC_E) // Left angle bracket (chevron)
+#define R_ANG    A(KC_D) // Right angle bracket (chevron)
+#define L_CUR    A(KC_R) // Left curly bracket (brace)
+#define R_CUR    A(KC_F) // Right curly bracket (brace)
 
 
-#define PERIOD   LOPT(KC_Y) // Period
-#define COMMA    LOPT(KC_H) // Comma
-#define COLON    LOPT(KC_U) // Colon
-#define SMCOLON  LOPT(KC_J) // Semicolon
-#define APOSTR   LOPT(KC_I) // Apostrophe
-#define DQUOT    LOPT(KC_K) // Double quote
-#define RSQM     LOPT(KC_8) // Right Single Quotation Mark
-#define EMARK    LOPT(KC_O) // Exclamation mark
-#define QMARK    LOPT(KC_L) // Question mark
-#define GACCENT  LOPT(KC_P) // Grave accent
-#define TILDE    LOPT(KC_SCLN) // Tilde
-#define VLINE    LOPT(KC_LBRC) // Vertical line
+#define PERIOD   A(KC_Y) // Period
+#define COMMA    A(KC_H) // Comma
+#define COLON    A(KC_U) // Colon
+#define SMCOLON  A(KC_J) // Semicolon
+#define APOSTR   A(KC_I) // Apostrophe
+#define DQUOT    A(KC_K) // Double quote
+#define RSQM     A(KC_8) // Right Single Quotation Mark
+#define EMARK    A(KC_O) // Exclamation mark
+#define QMARK    A(KC_L) // Question mark
+#define GACCENT  A(KC_P) // Grave accent
+#define TILDE    A(KC_SCLN) // Tilde
+#define VLINE    A(KC_LBRC) // Vertical line
 
 
-#define BULLET   LOPT(KC_MINS) // Bullet
-#define MSIGN    LOPT(KC_EQL) // Multiplication sign
+#define BULLET   A(KC_MINS) // Bullet
+#define MSIGN    A(KC_EQL) // Multiplication sign
 
 
-#define HYPHEN   LOPT(KC_1) // Hyphen
-#define NDASH    LOPT(KC_2) // En Dash
-#define MDASH    LOPT(KC_3) // Em Dash
-#define HLINE    LOPT(KC_4) // Horizontal Bar
+#define HYPHEN   A(KC_1) // Hyphen
+#define NDASH    A(KC_2) // En Dash
+#define MDASH    A(KC_3) // Em Dash
+#define HLINE    A(KC_4) // Horizontal Bar
 
 
-#define SLSH     LOPT(KC_T) // Slash
-#define BSLSH    LOPT(KC_G) // Backslash
+#define SLSH     A(KC_T) // Slash
+#define BSLSH    A(KC_G) // Backslash
 #define ATSGN    LSFT(KC_2) // At sign
 #define NMBR     LSFT(KC_3) // Number sign
 #define DLLR     LSFT(KC_4) // Dollar sign
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC,  PERIOD,
-         LANG_EN,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, LANG_UA,
-                                      TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
+         XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     ),
 
@@ -110,8 +110,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             UNDO, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,         KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
             REDO, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLD, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-         LANG_EN, XXXXXXX,     CUT,    COPY,   PASTE,     DND,         KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, LANG_UA,
-                                      TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
+         XXXXXXX, XXXXXXX,     CUT,    COPY,   PASTE,     DND,         KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, XXXXXXX,
+                                    LANG_EN,  KC_SPC,   TO(3),           TO(2), KC_BSPC, LANG_UA
 
     ),
 
@@ -121,8 +121,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PLUS,    KC_4,    KC_5,    KC_6, KC_ASTR,  KC_EQL,
          XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,           COMMA,    KC_0,    KC_1,    KC_2,    KC_3,  PERIOD,
-         LANG_EN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_MINS,    KC_7,    KC_8,    KC_9,    SLSH, LANG_UA,
-                                      TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_MINS,    KC_7,    KC_8,    KC_9,    SLSH, XXXXXXX,
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(4), KC_BSPC, LANG_UA
 
     ),
 
@@ -132,8 +132,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
            RESET, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,         XXXXXXX, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL, XXXXXXX,
-         LANG_EN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LANG_UA,
-                                      TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     ),
 
@@ -142,9 +142,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [4] = LAYOUT_split_3x6_3(
 
          GACCENT,   TILDE,   PRCNT,   L_SQR,   R_SQR,   NDASH,           MDASH,   L_CUR,   R_CUR,    NMBR,  APOSTR,   DQUOT,
-         XXXXXXX, XXXXXXX,   ATSGN,   L_RND,   R_RND,   QMARK,           EMARK,   L_ANG,   R_ANG,   CARET,   COLON, SMCOLON,
-         LANG_EN,   VLINE,   AMPRD,   MSIGN,  BULLET,    SLSH,           BSLSH, XXXXXXX, XXXXXXX,    DLLR,  UNDRSC, LANG_UA,
-                                      TO(3),  KC_SPC,   TO(1),           TO(2), KC_BSPC,   TO(4)
+         XXXXXXX,   HLINE,   ATSGN,   L_RND,   R_RND,   EMARK,           QMARK,   L_ANG,   R_ANG,   CARET,   COLON, SMCOLON,
+         XXXXXXX,   VLINE,   AMPRD,   MSIGN,  BULLET,    SLSH,           BSLSH, XXXXXXX, XXXXXXX,    DLLR,  UNDRSC, XXXXXXX,
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     )
 
