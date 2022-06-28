@@ -31,41 +31,42 @@
 #define PASTE    LCMD(KC_V) // Paste
 
 
-#define L_RND    LCTL(KC_Q) // Left round bracket (parenthes)
-#define R_RND    LCTL(KC_A) // Right round bracket (parenthes)
-#define L_SQR    LCTL(KC_W) // Left square bracket
-#define R_SQR    LCTL(KC_S) // Right square bracket
-#define L_ANG    LCTL(KC_E) // Left angle bracket (chevron)
-#define R_ANG    LCTL(KC_D) // Right angle bracket (chevron)
-#define L_CUR    LCTL(KC_R) // Left curly bracket (brace)
-#define R_CUR    LCTL(KC_F) // Right curly bracket (brace)
+#define L_RND    LOPT(KC_Q) // Left round bracket (parenthes)
+#define R_RND    LOPT(KC_A) // Right round bracket (parenthes)
+#define L_SQR    LOPT(KC_W) // Left square bracket
+#define R_SQR    LOPT(KC_S) // Right square bracket
+#define L_ANG    LOPT(KC_E) // Left angle bracket (chevron)
+#define R_ANG    LOPT(KC_D) // Right angle bracket (chevron)
+#define L_CUR    LOPT(KC_R) // Left curly bracket (brace)
+#define R_CUR    LOPT(KC_F) // Right curly bracket (brace)
 
 
-#define COLON    LCTL(KC_U) // Colon
-#define SMCOLON  LCTL(KC_J) // Semicolon
-#define APOSTR   LCTL(KC_I) // Apostrophe
-#define DQUOT    LCTL(KC_K) // Double quote
-#define RSQM     LCTL(KC_COMM) // Right Single Quotation Mark
-#define GACCENT  LCTL(KC_P) // Grave accent
-#define TILDE    LCTL(KC_SCLN) // Tilde
-#define VLINE    LCTL(KC_LBRC) // Vertical line
+#define PERIOD   LOPT(KC_Y) // Period
+#define COMMA    LOPT(KC_H) // Comma
+#define COLON    LOPT(KC_U) // Colon
+#define SMCOLON  LOPT(KC_J) // Semicolon
+#define APOSTR   LOPT(KC_I) // Apostrophe
+#define DQUOT    LOPT(KC_K) // Double quote
+#define RSQM     LOPT(KC_8) // Right Single Quotation Mark
+#define EMARK    LOPT(KC_O) // Exclamation mark
+#define QMARK    LOPT(KC_L) // Question mark
+#define GACCENT  LOPT(KC_P) // Grave accent
+#define TILDE    LOPT(KC_SCLN) // Tilde
+#define VLINE    LOPT(KC_LBRC) // Vertical line
 
 
-#define MSIGN    LCTL(KC_V) // Multiplication sign
-#define BULLET   LCTL(KC_B) // Bullet
+#define BULLET   LOPT(KC_MINS) // Bullet
+#define MSIGN    LOPT(KC_EQL) // Multiplication sign
 
 
-#define HYPHEN   LCTL(KC_Z) // Hyphen
-#define NDASH    LCTL(KC_X) // En Dash
-#define MDASH    LCTL(KC_C) // Em Dash
-#define PERIOD   LCTL(KC_Y) // Period
-#define COMMA    LCTL(KC_H) // Comma
-#define EMARK    LCTL(KC_O) // Exclamation mark
-#define QMARK    LCTL(KC_L) // Question mark
+#define HYPHEN   LOPT(KC_1) // Hyphen
+#define NDASH    LOPT(KC_2) // En Dash
+#define MDASH    LOPT(KC_3) // Em Dash
+#define HLINE    LOPT(KC_4) // Horizontal Bar
 
 
-#define SLSH     LCTL(KC_T) // Slash
-#define BSLSH    LCTL(KC_G) // Backslash
+#define SLSH     LOPT(KC_T) // Slash
+#define BSLSH    LOPT(KC_G) // Backslash
 #define ATSGN    LSFT(KC_2) // At sign
 #define NMBR     LSFT(KC_3) // Number sign
 #define DLLR     LSFT(KC_4) // Dollar sign
