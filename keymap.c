@@ -141,9 +141,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SPECIAL CHARACTERS
     [4] = LAYOUT_split_3x6_3(
 
-         GACCENT,   TILDE,   PRCNT,   L_SQR,   R_SQR,   NDASH,           MDASH,   L_CUR,   R_CUR,    NMBR,  APOSTR,   DQUOT,
-         XXXXXXX,   HLINE,   ATSGN,   L_RND,   R_RND,   EMARK,           QMARK,   L_ANG,   R_ANG,   CARET,   COLON, SMCOLON,
-         XXXXXXX,   VLINE,   AMPRD,   MSIGN,  BULLET,    SLSH,           BSLSH, XXXXXXX, XXXXXXX,    DLLR,  UNDRSC, XXXXXXX,
+         GACCENT,   TILDE,   L_SQR,   R_SQR,   NDASH,   PRCNT,            NMBR,   MDASH,   L_CUR,   R_CUR,  APOSTR,   DQUOT,
+         XXXXXXX,   HLINE,   L_RND,   R_RND,   EMARK,   ATSGN,           CARET,   QMARK,   L_ANG,   R_ANG,   COLON, SMCOLON,
+         XXXXXXX,   VLINE,   BULLET,  MSIGN,    SLSH,   AMPRD,            DLLR,   BSLSH,  UNDRSC, XXXXXXX, XXXXXXX, XXXXXXX,
                                     LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     )
