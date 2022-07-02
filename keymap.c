@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,            KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC,  PERIOD,
          XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
-                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
+                                    LANG_EN,    TO(1), KC_SPC,         KC_BSPC,   TO(2), LANG_UA
 
     ),
 
@@ -108,10 +108,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // MACOS CONTROLS AND APPS
     [1] = LAYOUT_split_3x6_3(
 
-            UNDO, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,         KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
-            REDO, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         KC_VOLD, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-         XXXXXXX, XXXXXXX,     CUT,    COPY,   PASTE,     DND,         KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT, XXXXXXX,
-                                    LANG_EN,  KC_SPC,   TO(3),           TO(2), KC_BSPC, LANG_UA
+         KC_VOLU,    UNDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
+         KC_VOLD,    REDO,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,         XXXXXXX, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+         KC_MUTE, XXXXXXX,     CUT,    COPY,   PASTE,   TO(3),           TO(4), XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,     DND,
+                                    LANG_EN,   TO(1),  KC_SPC,         KC_BSPC,   TO(2), LANG_UA
 
     ),
 
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PLUS,    KC_7,    KC_8,    KC_9, KC_ASTR,  KC_EQL,
          XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,           COMMA,    KC_0,    KC_1,    KC_2,    KC_3,  PERIOD,
          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_MINS,    KC_4,    KC_5,    KC_6,    SLSH, XXXXXXX,
-                                    LANG_EN,  KC_SPC,   TO(1),           TO(4), KC_BSPC, LANG_UA
+                                    LANG_EN,  KC_SPC,   TO(1),           TO(2), KC_BSPC, LANG_UA
 
     ),
 
