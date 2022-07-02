@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU,    UNDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
          KC_VOLD,    REDO,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                 XXXXXXX, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-         KC_MUTE, XXXXXXX,     CUT,    COPY,   PASTE,   TO(3),                   TO(4), XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,     DND,
+         KC_MUTE, XXXXXXX,     CUT,    COPY,   PASTE,   TO(3),                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  SS_OPT,     DND,
                                             LANG_EN,   TO(1),  KC_SPC, KC_BSPC,   TO(2), LANG_UA
 
     ),
@@ -119,9 +119,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // NUMPAD       
     [2] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 KC_PLUS,    KC_7,    KC_8,    KC_9, KC_ASTR,  KC_EQL,
-         XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, XXXXXXX,                   COMMA,    KC_0,    KC_1,    KC_2,    KC_3,  PERIOD,
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 KC_MINS,    KC_4,    KC_5,    KC_6,    SLSH, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS,                  PERIOD,    KC_7,    KC_8,    KC_9, XXXXXXX, KC_SLSH,
+         XXXXXXX, KC_LCTL, KC_LSFT, KC_LOPT, KC_LCMD, KC_PLUS,                   COMMA,    KC_0,    KC_1,    KC_2,    KC_3, KC_ASTR,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   TO(4),    KC_4,    KC_5,    KC_6, XXXXXXX,  KC_EQL,
                                             LANG_EN,   TO(1),  KC_SPC, KC_BSPC,   TO(2), LANG_UA
 
     ),
