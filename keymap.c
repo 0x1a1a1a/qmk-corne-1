@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
+#include "glossary.c"
 #include "macros.c"
 
 
