@@ -4,12 +4,12 @@
 #define USE_SERIAL_PD2
 
 
-#define COMBO_COUNT 2
+#define COMBO_COUNT 29
 #define COMBO_ONLY_FROM_LAYER 0
 
-
-#define TAPPING_FORCE_HOLD // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_TERM 200 // Configure the global tapping term (default: 200ms).
+// Tap-Hold Configuration Options (https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md)
+// #define TAPPING_FORCE_HOLD // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_TERM 300 // Configure the global tapping term (default: 200ms).
 
 #ifdef RGB_MATRIX_ENABLE
     // #define RGB_MATRIX_KEYPRESSES
