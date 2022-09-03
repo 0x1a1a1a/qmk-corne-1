@@ -9,7 +9,7 @@
 
 // Tap-Hold Configuration Options (https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md)
 // #define TAPPING_FORCE_HOLD // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_TERM 300 // Configure the global tapping term (default: 200ms).
+#define TAPPING_TERM 400 // Configure the global tapping term in ms (default: 200).
 
 #ifdef RGB_MATRIX_ENABLE
     // #define RGB_MATRIX_KEYPRESSES

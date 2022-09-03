@@ -29,40 +29,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_U)))));
         }
         break;
-
-    case CHORD10:
-        if (record->event.pressed) {
-            layer_move(0);
-            register_code16(LOPT(KC_B));
-        }
-        else {
-            unregister_code16(LOPT(KC_B));
-            layer_move(5);
-
-        }
-        break;
-
-    case CHORD11:
-        if (record->event.pressed) {
-            layer_move(0);
-            register_code16(LOPT(KC_N));
-        }
-        else {
-            unregister_code16(LOPT(KC_N));
-            layer_move(5);
-        }
-        break;
-
-    case CHORD12:
-        if (record->event.pressed) {
-            layer_move(0);
-            register_code16(LOPT(KC_V));
-        }
-        else {
-            unregister_code16(LOPT(KC_V));
-            layer_move(5);
-        }
-        break;
     }
 
     return true;
@@ -103,10 +69,10 @@ const uint16_t PROGMEM risateno25[] = {KC_L, KC_F, COMBO_END};
 
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo1, TO(3)), // Switch to Layer 3 (arrows)
-    COMBO(combo2, TO(4)), // Switch to Layer 4 (special characters)
-    COMBO(combo3, TO(5)), // Switch to Layer 5 (Risateno)
-    COMBO(combo4, TO(6)), // Switch to Layer 6 (game)
+    COMBO(combo1, TO(ARR)), // Switch to Layer: ARROWS
+    COMBO(combo2, TO(SPE)), // Switch to Layer: SPECIAL CHARACTERS
+    COMBO(combo3, TO(RIS)), // Switch to Layer: RISATENO
+    COMBO(combo4, TO(GAM)), // Switch to Layer: GAMES
     COMBO(risateno1, LT(1, KC_K)), // Risateno: в
     COMBO(risateno2, LT(1, KC_I)), // Risateno: к
     COMBO(risateno3, LT(1, KC_O)), // Risateno: д
