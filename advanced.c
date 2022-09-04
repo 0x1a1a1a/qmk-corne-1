@@ -1,32 +1,69 @@
 enum custom_keycodes {
     LANG_EN = SAFE_RANGE,
     LANG_UA,
-    CHORD10,
-    CHORD11,
-    CHORD12,
+    RISATENO10,
+    RISATENO11,
+    RISATENO12,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+
+
     case LANG_EN:
         if (record->event.pressed) {
-            layer_move(0);
-            // tap_code(KC_F16);
-            register_code16(LCMD(LOPT(LSFT(LCTL(KC_E)))));
+            register_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
         }
         else {
-            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_E)))));
+            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
+            layer_move(0);
         }
         break;
-    
+
+
     case LANG_UA:
         if (record->event.pressed) {
-            layer_move(0);
-            // tap_code(KC_F17);
-            register_code16(LCMD(LOPT(LSFT(LCTL(KC_U)))));
+            register_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
         }
         else {
-            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_U)))));
+            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
+            layer_move(0);
+        }
+        break;
+
+
+    case RISATENO10:
+        if (record->event.pressed) {
+            layer_move(0);
+            register_code16(LOPT(KC_B));
+        }
+        else {
+            unregister_code16(LOPT(KC_B));
+            layer_move(5);
+        }
+        break;
+
+
+    case RISATENO11:
+        if (record->event.pressed) {
+            layer_move(0);
+            register_code16(LOPT(KC_N));
+        }
+        else {
+            unregister_code16(LOPT(KC_N));
+            layer_move(5);
+        }
+        break;
+
+
+    case RISATENO12:
+        if (record->event.pressed) {
+            layer_move(0);
+            register_code16(LOPT(KC_V));
+        }
+        else {
+            unregister_code16(LOPT(KC_V));
+            layer_move(5);
         }
         break;
     }
@@ -82,9 +119,9 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(risateno7, LT(1, KC_B)), // Risateno: й
     COMBO(risateno8, LT(1, KC_Z)), // Risateno: ж
     COMBO(risateno9, LT(1, KC_Q)), // Risateno: ю
-    COMBO(risateno10, CHORD10), // Risateno: щ
-    COMBO(risateno11, CHORD11), // Risateno: ф
-    COMBO(risateno12, CHORD12), // Risateno: ґ
+    COMBO(risateno10, RISATENO10), // Risateno: щ
+    COMBO(risateno11, RISATENO11), // Risateno: ф
+    COMBO(risateno12, RISATENO12), // Risateno: ґ
     COMBO(risateno13, LT(1, KC_COMM)), // Risateno: л
     COMBO(risateno14, LT(1, KC_C)), // Risateno: м
     COMBO(risateno15, LT(1, KC_DOT)), // Risateno: п
