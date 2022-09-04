@@ -69,10 +69,10 @@ const uint16_t PROGMEM risateno25[] = {KC_L, KC_F, COMBO_END};
 
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo1, TO(ARR)), // Switch to Layer: ARROWS
-    COMBO(combo2, TO(SPE)), // Switch to Layer: SPECIAL CHARACTERS
-    COMBO(combo3, TO(RIS)), // Switch to Layer: RISATENO
-    COMBO(combo4, TO(GAM)), // Switch to Layer: GAMES
+    COMBO(combo1, TO(3)), // Switch to Layer: ARROWS
+    COMBO(combo2, TO(4)), // Switch to Layer: SPECIAL CHARACTERS
+    COMBO(combo3, TO(5)), // Switch to Layer: RISATENO
+    COMBO(combo4, TO(6)), // Switch to Layer: GAMES
     COMBO(risateno1, LT(1, KC_K)), // Risateno: в
     COMBO(risateno2, LT(1, KC_I)), // Risateno: к
     COMBO(risateno3, LT(1, KC_O)), // Risateno: д

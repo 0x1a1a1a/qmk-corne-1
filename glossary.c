@@ -13,7 +13,7 @@
 #define DND      HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
 #define ALFRD    HYPR(KC_S) // macOS: Shortcut for Alfred
 #define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Shortcut for screenshot and recording options
-#define MCTRL    HYPR(KC_V) // macOS: Shortcut for Mission Control
+#define MCTRL    HYPR(KC_E) // macOS: Shortcut for Mission Control
 #define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
 #define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
 
