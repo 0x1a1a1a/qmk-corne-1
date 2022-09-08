@@ -11,8 +11,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  HOME_A,  HOME_S,  HOME_D,  HOME_F,    KC_G,                    KC_H,  HOME_J,  HOME_K,  HOME_L, HOME_SC,  PERIOD,
-         XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   TO(6),
-                                          KC_BSPC,   TO(1),  KC_SPC,     KC_BSPC, XXXXXXX, XXXXXXX
+            TEST,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   TO(6),
+                                          KC_BSPC,   TO(1),  KC_SPC,     KC_BSPC, LANG_EN, LANG_UA
 
     ),
 
@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU, XXXXXXX,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BRIU,
          KC_VOLD, XXXXXXX,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                 XXXXXXX, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-         KC_MUTE,   TO(3),   TO(2), LANG_UA, LANG_EN,   TO(4),                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND,
+         KC_MUTE,    UNDO,     CUT,    COPY,   PASTE,   TO(4),                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     DND,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -39,9 +39,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ARROWS
     [3] = LAYOUT_split_3x6_3(
 
-         XXXXXXX, XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+           RESET, XXXXXXX,  MWRD_L,   KC_UP,  MWRD_R, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,                 XXXXXXX, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL, XXXXXXX,
-           RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -57,14 +57,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // RISATENO
-    [5] = LAYOUT_split_3x6_3(
-
-         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX,    KC_L,    KC_D,    KC_R,    KC_J, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         XXXXXXX,    KC_U,    KC_V,    KC_M,    KC_F, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                          KC_TRNS, KC_BSPC,  KC_SPC,     KC_TRNS, KC_TRNS, KC_TRNS
-
-    ),
+//     [5] = LAYOUT_split_3x6_3(
+// 
+//          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+//          XXXXXXX,    KC_L,    KC_D,    KC_R,    KC_J, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+//          XXXXXXX,    KC_U,    KC_V,    KC_M,    KC_F, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+//                                           KC_TRNS, KC_BSPC,  KC_SPC,     KC_TRNS, KC_TRNS, KC_TRNS
+// 
+//     ),
 
     // GAMES
     [6] = LAYOUT_split_3x6_3(

@@ -9,20 +9,27 @@
 #define HOME_SC  LCTL_T(KC_SCLN)
 
 
-#define EMOJI    LCTL(LCMD(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
+// Modifiers
+// C(kc)         Hold Left Control and press kc
+// S(kc)         Hold Left Shift and press kc
+// A(kc)         Hold Left Alt and press kc
+// G(kc)         Hold Left GUI and press kc
+
+
+#define EMOJI    C(G(KC_SPC)) // macOS: Shortcut for Emoji&Symbols
 #define DND      HYPR(KC_Z) // macOS: Shortcut for Do Not Disturb
 #define ALFRD    HYPR(KC_S) // macOS: Shortcut for Alfred
-#define SS_OPT   LSFT(LCMD(KC_5)) // macOS: Shortcut for screenshot and recording options
-#define MCTRL    HYPR(KC_E) // macOS: Shortcut for Mission Control
-#define SPC_L    LCTL(KC_LEFT) // macOS: Shortcut for move right a space
-#define SPC_R    LCTL(KC_RGHT) // macOS: Shortcut for move left a space
+#define SS_OPT   S(G(KC_5)) // macOS: Shortcut for screenshot and recording options
+#define MCTRL    C(KC_UP) // macOS: Shortcut for Mission Control
+#define SPC_L    C(KC_LEFT) // macOS: Shortcut for move left a space
+#define SPC_R    C(KC_RGHT) // macOS: Shortcut for move right a space
 
 
-#define UNDO     LCMD(KC_Z) // Undo
-#define REDO     LCMD(LSFT(KC_Z)) // Redo
-#define CUT      LCMD(KC_X) // Cut
-#define COPY     LCMD(KC_C) // Copy
-#define PASTE    LCMD(KC_V) // Paste
+#define UNDO     G(KC_Z) // Undo
+#define REDO     G(S(KC_Z)) // Redo
+#define CUT      G(KC_X) // Cut
+#define COPY     G(KC_C) // Copy
+#define PASTE    G(KC_V) // Paste
 
 
 #define L_RND    A(KC_Q) // Left round bracket (parenthes)
@@ -61,13 +68,20 @@
 
 #define SLSH     A(KC_T) // Slash
 #define BSLSH    A(KC_G) // Backslash
-#define ATSGN    LSFT(KC_2) // At sign
-#define NMBR     LSFT(KC_3) // Number sign
-#define DLLR     LSFT(KC_4) // Dollar sign
-#define PRCNT    LSFT(KC_5) // Percent sign
-#define CARET    LSFT(KC_6) // Caret
-#define AMPRD    LSFT(KC_7) // Ampersand
-#define UNDRSC   LSFT(KC_MINS) // Underscore
+#define ATSGN    S(KC_2) // At sign
+#define NMBR     S(KC_3) // Number sign
+#define DLLR     S(KC_4) // Dollar sign
+#define PRCNT    S(KC_5) // Percent sign
+#define CARET    S(KC_6) // Caret
+#define AMPRD    S(KC_7) // Ampersand
+#define UNDRSC   S(KC_MINS) // Underscore
+
+
+#define MWRD_L   A(KC_LEFT) // Move the insertion point to the beginning of the previous word
+#define MWRD_R   A(KC_RGHT) // Move the insertion point to the end of the next word
+
+
+// #define TEST 0x10 // m, key code 46
 
 
 
