@@ -87,7 +87,7 @@ TAP_DANCE_ENABLE       = no           # Tap Dance
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_tap_dance.md
                                       # Set "no" to reduce firmwire size
 
-UNICODE_ENABLE         = no           # Unicode support
+UNICODE_ENABLE         = yes          # Unicode support
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_unicode.md
                                       # Set "no" to reduce firmwire size
 

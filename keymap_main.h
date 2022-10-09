@@ -11,6 +11,7 @@ enum layers {
     _SPE,
     _GAM,
     _CON,
+	_U1,
 };
 
 
@@ -25,8 +26,8 @@ enum custom_keycodes {
 
 
 
-// 8-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
-#define _______  KC_NO
+// 2-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
+#define __       KC_NO
 
 
 // Home row mods (as Mod-Taps)
@@ -42,13 +43,14 @@ enum custom_keycodes {
 
 // macOS
 #define EMOJI    C(G(KC_SPC)) // Emoji & Symbols
-#define DND      HYPR(KC_Z) // Do Not Disturb
+#define DND      HYPR(KC_N) // Do Not Disturb
 #define ALFRD    HYPR(KC_S) // Alfred
 #define SS_OPT   S(G(KC_5)) // Screenshot and recording options
 #define MCTRL    C(KC_UP) // Mission Control
 #define SPC_L    C(KC_LEFT) // Move left a space
 #define SPC_R    C(KC_RGHT) // Move right a space
 #define LCKSCR   C(G(KC_Q)) // Lock Screen
+#define NOTIF    HYPR(KC_H) // Show Notification Centre
 
 
 //macOS: Google Meet contols
@@ -64,7 +66,7 @@ enum custom_keycodes {
 #define CUT      G(KC_X) // Cut
 #define COPY     G(KC_C) // Copy
 #define PASTE    G(KC_V) // Paste
-#define PASTEX   S(G(KC_V)) // Paste and Match Style
+#define XPASTE   S(G(KC_V)) // Paste and Match Style
 #define SELALL   G(KC_A) // Select all
 
 

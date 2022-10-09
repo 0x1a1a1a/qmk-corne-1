@@ -5,7 +5,7 @@
 #define USE_SERIAL_PD2
 
 
-#define COMBO_COUNT 5
+#define COMBO_COUNT 7
 #define COMBO_ONLY_FROM_LAYER 0
 
 // Tap-Hold Configuration Options
