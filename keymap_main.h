@@ -49,13 +49,6 @@ enum custom_keycodes {
 #define NOTIF    HYPR(KC_H) // Show Notification Centre
 
 
-//macOS: Google Meet contols
-#define MET_MIC  HYPR(KC_U) // Toggle microphone
-#define MET_CAM  HYPR(KC_I) // Toggle camera
-#define MET_ALL  HYPR(KC_O) // Toggle microphone and camera
-#define MET_HND  HYPR(KC_M) // Raise hand
-
-
 // Commands
 #define UNDO     G(KC_Z) // Undo
 #define REDO     G(S(KC_Z)) // Redo
