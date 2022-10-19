@@ -11,7 +11,6 @@ enum layers {
     _SPE,
     _GAM,
     _CON,
-	_U1,
 };
 
 
@@ -19,9 +18,6 @@ enum custom_keycodes {
 	// Language layouts switchers
     LANG_EN = SAFE_RANGE,
     LANG_UA,
-
-	// Test app opener via Alfred
-    APP_NTS,
 };
 
 
@@ -118,6 +114,3 @@ enum custom_keycodes {
 // Select text
 #define SWRD_L   S(A(KC_LEFT)) // Previous word
 #define SWRD_R   S(A(KC_RGHT)) // Next word
-
-
-// #define TEST 0x10 // m, key code 46
