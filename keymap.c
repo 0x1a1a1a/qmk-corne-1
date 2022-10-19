@@ -14,15 +14,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,   A_CTL,   S_SFT,   D_OPT,   F_CMD,    KC_G,                    KC_H,   J_CMD,   K_OPT,   L_SFT,  SC_CTL,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                          KC_BSPC,MO(_CON),  KC_SPC,     KC_BSPC,      __,  KC_DEL
+                                          KC_BSPC,MO(_CON),  KC_SPC,     KC_BSPC,MO(_NUM),  KC_DEL
 
     ),
 
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_VOLU,    REDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT, MET_MIC, MET_CAM, MET_ALL,      __, KC_BRIU,
-         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+         KC_VOLU,    REDO,   SPC_L,   MCTRL,   SPC_R,   NOTIF,                  SS_OPT, MET_MIC, MET_CAM, MET_ALL,      __, KC_BRIU,
+         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   ALFRD, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
          KC_MUTE,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND, MET_HND,      __,      __,      __,  LCKSCR,
                                                __,      __,      __,          __,      __,      __
 
@@ -31,10 +31,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Numpad       
     [_NUM] = LAYOUT_split_3x6_3(
 
-         KC_PAST, KC_PPLS,    KC_9,    KC_8,    KC_7,   COMMA,                      __,      __,      __,      __,      __,      __,
-         KC_PEQL,    KC_3,    KC_2,    KC_1,    KC_0,  PERIOD,                      __, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL,      __,
-         KC_PSLS, KC_PMNS,    KC_6,    KC_5,    KC_4, KC_PENT,                      __,      __,      __,      __,      __,      __,
-                                          KC_BSPC,MO(_CON),  KC_SPC,     KC_BSPC,      __, KC_DEL
+              __,      __,      __,      __,      __,      __,                 KC_PPLS,    KC_7,    KC_8,    KC_9,   COMMA, KC_PAST,
+              __, KC_RCTL, KC_RSFT, KC_ROPT, KC_RCMD,      __,                 KC_PMNS,    KC_4,    KC_5,    KC_6,    KC_3, KC_PSLS,
+              __,      __,      __,      __,      __,      __,                    KC_0,    KC_1,    KC_2,    KC_3,  PERIOD, KC_PEQL,
+                                               __,      __,      __,          __,      __,      __
 
     ),
 
