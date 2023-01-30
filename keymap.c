@@ -1,40 +1,50 @@
 // Include keyboard-specific headers instead of <keyboard.h>
 #include QMK_KEYBOARD_H
 
+
 // Include headers for the keymap
 #include "advanced.h"
+// #include "keylayout.h"
+#include "macros.c"
+#include "combos.c"
+
+
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
+    // English layout
+    [_ENG] = LAYOUT_split_3x6_3(
 
-
-    // Main
-    [_MAI] = LAYOUT_split_3x6_3(
-
-          HYPHEN,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RSQM,
-           COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_J,  _SFT_L, _CTL_SC,  PERIOD,
-           /* QMARK */,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
+            RSQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
+           COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
+           QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
                                           LANG_EN, __CNTRL,  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
 
     ),
 
 
+//     // Ukrainian layout
+//     [_UKR] = LAYOUT_split_3x6_3(
+// 
+//           HYPHEN,   UA_JU,   UA_MZ,    UA_U,    UA_E,   UA_CH,                    UA_H,    UA_P,    UA_K,    UA_D,   UA_SH,    RSQM,
+//            COMMA,   UA_JI,    UA_I,    UA_A,    UA_N,    UA_G,                    UA_Z,    UA_O,    UA_V,    UA_Y,    UA_C,  PERIOD,
+//            QMARK,   UA_ZH,   UA_JA,    UA_M,    UA_S,    UA_J,                    UA_N,    UA_T,    UA_L,    UA_P,   UA_JE,   EMARK,
+//                                           LANG_EN, __CNTRL,  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
+// 
+//     ),
 
 
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_MUTE,    REDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT,________,________,________,________,  LCKSCR,
-         KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
-         KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________,________,________, KC_CAPS, KC_BRID,
+         KC_VOLU,    REDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT,________,________,________,________, KC_BRIU,
+         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+         KC_MUTE,    UNDO,     CUT,    COPY,   PASTE,   CTAB0,                     DND,________,________,________, KC_CAPS,  LCKSCR,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
-
-
-
 
     // Numpad       
     [_NUM] = LAYOUT_split_3x6_3(
@@ -45,8 +55,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
-
-
 
 
     // Navigation
@@ -60,8 +68,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
-
-
     // Special characters
     [_SPE] = LAYOUT_split_3x6_3(
 
@@ -73,8 +79,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
-
-
     // Games without Mod-Tap
     [_GAM] = LAYOUT_split_3x6_3(
 
@@ -84,8 +88,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     )
-
-
 
 
 };

@@ -6,8 +6,6 @@
 # https://github.com/qmk/qmk_firmware/blob/master/docs/squeezing_avr.md
 
 
-
-
 APPLE_FN_ENABLE        = yes
 
 AUDIO_ENABLE           = no           # Audio output (port C6)
