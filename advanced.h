@@ -3,38 +3,103 @@
 #pragma once
 
 
-// Layers aliases
+
+
+// Short aliases for layers and priority
 enum layers {
     _MAI = 0,
-    _NUM,
-    _NAV,
-    _SPE,
-    _GAM,
-    _CON,
+    _NAV = 1,
+    _SPE = 2,
+    _GAM = 3,
+    _CON = 4,
+    _NUM = 5,
 };
 
 
+
+
 enum custom_keycodes {
-	// Language layouts switchers
     LANG_EN = SAFE_RANGE,
     LANG_UA,
 };
 
 
 
-// 2-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
-#define __       KC_NO
+
+// Macros
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+
+
+    	case LANG_EN:
+        if (record->event.pressed) {
+            register_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
+        }
+        else {
+            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
+            layer_move(_MAI);
+        }
+        break;
+
+
+		case LANG_UA:
+        if (record->event.pressed) {
+            register_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
+        }
+        else {
+            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
+            layer_move(_MAI);
+        }
+        break;
+
+
+    }
+
+    return true;
+};
+
+
+
+
+// Combos
+const uint16_t PROGMEM en[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM ua[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM numpad[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM navigation[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM special[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM games[] = {KC_U, KC_I, COMBO_END};
+
+
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(en, LANG_EN), // Switch to Layer: MAI + English layout
+    COMBO(ua, LANG_UA), // Switch to Layer: MAI + Ukrainian layout
+    COMBO(numpad, TO(_NUM)), // Switch to Layer: NUM
+    COMBO(navigation, TO(_NAV)), // Switch to Layer: NAV
+    COMBO(special, TO(_SPE)), // Switch to Layer: SPE
+    COMBO(games, TO(_GAM)), // Switch to Layer: SPE
+};
+
+
+
+
+// Full aliases for layers
+#define __CNTRL  MO(_CON)
+#define __NMBRS  MO(_NUM)
+
+
+// 8-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
+#define ________ KC_NO
 
 
 // Home row mods (as Mod-Taps)
-#define A_CTL    LCTL_T(KC_A)
-#define S_SFT    LSFT_T(KC_S)
-#define D_OPT    LOPT_T(KC_D)
-#define F_CMD    LCMD_T(KC_F)
-#define J_CMD    LCMD_T(KC_J)
-#define K_OPT    LOPT_T(KC_K)
-#define L_SFT    LSFT_T(KC_L)
-#define SC_CTL   LCTL_T(KC_SCLN)
+#define _CTL_A   LCTL_T(KC_A)
+#define _SFT_S   LSFT_T(KC_S)
+#define _OPT_D   LOPT_T(KC_D)
+#define _CMD_F   LCMD_T(KC_F)
+#define _CMD_J   RCMD_T(KC_J)
+#define _CMD_J   ROPT_T(KC_K)
+#define _SFT_L   RSFT_T(KC_L)
+#define _CTL_SC  RCTL_T(KC_SCLN)
 
 
 // macOS
@@ -107,3 +172,4 @@ enum custom_keycodes {
 // Select text
 #define SWRD_L   S(A(KC_LEFT)) // Previous word
 #define SWRD_R   S(A(KC_RGHT)) // Next word
+

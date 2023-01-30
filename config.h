@@ -1,18 +1,25 @@
 #pragma once
 
+
 #define MASTER_LEFT
 #define SPLIT_USB_DETECT
 #define USE_SERIAL_PD2
+#define FORCE_NKRO
+// #define TAP_HOLD_CAPS_DELAY 0
+// #define TAP_CODE_DELAY 0
 
 
+// Combo settings
 #define COMBO_COUNT 7
 #define COMBO_ONLY_FROM_LAYER 0
+
 
 // Tap-Hold Configuration Options
 // https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md
 // https://precondition.github.io/home-row-mods
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 190
+
 
 #ifdef RGB_MATRIX_ENABLE
     // #define RGB_MATRIX_KEYPRESSES
@@ -32,11 +39,13 @@
     #define RGB_MATRIX_STARTUP_SPD 16
 #endif
 
+
 #ifdef MOUSEKEY_ENABLE
     #define MOUSEKEY_DELAY 0
     #define MOUSEKEY_INITIAL_SPEED 500
     #define MOUSEKEY_BASE_SPEED 500
 #endif
+
 
 #ifdef UNICODE_ENABLE
     #define UNICODE_SELECTED_MODES UC_MAC
