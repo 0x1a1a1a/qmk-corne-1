@@ -81,19 +81,25 @@ bool in_tab = false;
 #define R_ANG    A(KC_D) // Right angle bracket (chevron)
 #define L_CUR    A(KC_R) // Left curly bracket (brace)
 #define R_CUR    A(KC_F) // Right curly bracket (brace)
+
+#define L_SQM    A(KC_Z) // Left Single Quotation Mark
+#define R_SQM    A(KC_X) // Right Single Quotation Mark
+#define L_DQM    A(KC_V) // Left Double Quotation Mark
+#define R_DQM    A(KC_B) // Right Double Quotation Mark
+
 #define PERIOD   A(KC_Y) // Period
 #define COMMA    A(KC_H) // Comma
 #define COLON    A(KC_U) // Colon
 #define SMCOLON  A(KC_J) // Semicolon
 #define APOSTR   A(KC_I) // Apostrophe
 #define DQUOT    A(KC_K) // Double quote
-#define RSQM     A(KC_8) // Right Single Quotation Mark
 #define EMARK    A(KC_O) // Exclamation mark
 #define QMARK    A(KC_L) // Question mark
 #define GACCENT  A(KC_P) // Grave accent
 #define TILDE    A(KC_SCLN) // Tilde
 #define VLINE    A(KC_LBRC) // Vertical line
-#define BULLET   A(KC_MINS) // Bullet
+#define BUL      A(KC_MINS) // Bullet
+#define WBUL     A(KC_B) // White bullet
 #define MSIGN    A(KC_EQL) // Multiplication sign
 #define HYPHEN   A(KC_1) // Hyphen
 #define NDASH    A(KC_2) // En Dash
