@@ -81,7 +81,7 @@ SPLIT_KEYBOARD         = yes
 SWAP_HANDS_ENABLE      = no           # One-hand typing
                                       # Set "no" to reduce firmwire size
 
-TAP_DANCE_ENABLE       = no           # Tap Dance
+TAP_DANCE_ENABLE       = yes          # Tap Dance
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_tap_dance.md
                                       # Set "no" to reduce firmwire size
 

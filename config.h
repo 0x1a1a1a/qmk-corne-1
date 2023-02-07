@@ -19,6 +19,7 @@
 // https://precondition.github.io/home-row-mods
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 190
+#define TAPPING_TERM_PER_KEY
 
 
 #ifdef RGB_MATRIX_ENABLE

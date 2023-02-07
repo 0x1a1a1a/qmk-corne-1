@@ -84,8 +84,8 @@ bool in_tab = false;
 
 #define L_SQM    A(KC_Z) // Left Single Quotation Mark
 #define R_SQM    A(KC_X) // Right Single Quotation Mark
-#define L_DQM    A(KC_V) // Left Double Quotation Mark
-#define R_DQM    A(KC_B) // Right Double Quotation Mark
+#define L_DQM    A(KC_C) // Left Double Quotation Mark
+#define R_DQM    A(KC_V) // Right Double Quotation Mark
 
 #define PERIOD   A(KC_Y) // Period
 #define COMMA    A(KC_H) // Comma
