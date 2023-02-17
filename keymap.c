@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
            L_SQM, GACCENT,   TILDE,   DQUOT,  APOSTR,   PRCNT,                    NMBR,   COLON, SMCOLON,    WBUL,   MDASH,   R_SQM,
            L_DQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_DQM,
-          UNDRSC,   VLINE,________, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   HLINE,   MDASH,   NDASH,
+          UNDRSC,   VLINE,   MSIGN, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   HLINE,   MDASH,   NDASH,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),

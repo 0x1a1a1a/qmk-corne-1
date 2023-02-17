@@ -15,5 +15,5 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(numpad, TO(_NUM)), // Switch to Layer: NUM
     COMBO(navigation, TO(_NAV)), // Switch to Layer: NAV
     COMBO(special, TO(_SPE)), // Switch to Layer: SPE
-    COMBO(games, TO(_GAM)), // Switch to Layer: SPE
+    COMBO(games, TO(_GAM)), // Switch to Layer: GAM
 };
