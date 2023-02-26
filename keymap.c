@@ -6,7 +6,7 @@
 #include "dictionary.h"
 #include "macros.c"
 #include "combos.c"
-#include "tapdance.c"
+#include "tapdances.c"
 
 
 
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_MUTE,    REDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT,________,________,________,________,  LCKSCR,
          KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
-         KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,   CTAB0,                     DND,________,________,________, KC_CAPS, KC_BRID,
+         KC_VOLD,    UNDO,     CtUT,    COPY,   PASTE,   CTAB0,                     DND,________,________,________, KC_CAPS, KC_BRID,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -60,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Navigation
     [_NAV] = LAYOUT_split_3x6_3(
 
-         KC_PGUP, KC_HOME,  MWRD_L,   KC_UP,  MWRD_R,  KC_END,                ________, KC_LBRC, KC_RBRC,________,________,   RESET,
+         KC_PGUP, KC_HOME,  MWRD_L,   KC_UP,  MWRD_R,  KC_END,                ________,________,________,________,________,   RESET,
          KC_PGDN,  SWRD_L, KC_LEFT, KC_DOWN, KC_RGHT,  SWRD_R,                ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
-        ________,________,  MLIN_L,________,  MLIN_R,________,                ________,________,________,________,________,________,
+        ________,  MLIN_L,    TABL,________,    TABR,  MLIN_R,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Special characters
     [_SPE] = LAYOUT_split_3x6_3(
 
-           L_SQM, GACCENT,   TILDE,   DQUOT,  APOSTR,   PRCNT,                    NMBR,   COLON, SMCOLON,    WBUL,   MDASH,   R_SQM,
+           L_SQM, GACCENT,   TILDE,   DQUOT,  APOSTR,   PRCNT,                    NMBR,   COLON, SMCOLON,________,________,   R_SQM,
            L_DQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_DQM,
           UNDRSC,   VLINE,   MSIGN, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   HLINE,   MDASH,   NDASH,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
@@ -79,8 +79,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
-    // Games without Mod-Tap
-    [_GAM] = LAYOUT_split_3x6_3(
+    // No Mod-Tap
+    [_NMT] = LAYOUT_split_3x6_3(
 
           HYPHEN,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   R_SQM,
            COMMA,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  PERIOD,
@@ -88,6 +88,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     )
+
+    // TBD: Arrow symbols
+
+    // TBD: Mouse keys
 
 
 };

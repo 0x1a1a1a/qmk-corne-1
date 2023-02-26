@@ -9,7 +9,7 @@ enum layers {
     _UKR = 1,
     _NAV = 2,
     _SPE = 3,
-    _GAM = 4,
+    _NMT = 4,
     _CON = 5,
     _NUM = 6,
 };
@@ -60,6 +60,11 @@ bool in_tab = false;
 #define SPC_R    C(KC_RGHT) // Move right a space
 #define LCKSCR   C(G(KC_Q)) // Lock Screen
 #define NOTIF    HYPR(KC_H) // Show Notification Centre
+
+
+// Chrome
+#define TABL     G(S(KC_LBRC)) // Go to the previous tab
+#define TABR     G(S(KC_RBRC)) // Go to the next tab
 
 
 // Commands
