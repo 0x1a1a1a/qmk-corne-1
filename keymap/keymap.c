@@ -39,9 +39,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_MUTE,    REDO,   SPC_L,   MCTRL,   SPC_R,   ALFRD,                  SS_OPT,________,________,________,________,  LCKSCR,
-         KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
-         KC_VOLD,    UNDO,     CtUT,    COPY,   PASTE,   CTAB0,                     DND,________,________,________, KC_CAPS, KC_BRID,
+         KC_MUTE,  DSKTP1,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   ALFRD,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
+         KC_VOLU,    REDO,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
+         KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,   CTAB0,                     DND,  SS_OPT,________,________, KC_CAPS, KC_BRID,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -60,15 +60,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Navigation
     [_NAV] = LAYOUT_split_3x6_3(
 
-         KC_PGUP, KC_HOME,  MWRD_L,   KC_UP,  MWRD_R,  KC_END,                ________,________,________,________,________,   RESET,
-         KC_PGDN,  SWRD_L, KC_LEFT, KC_DOWN, KC_RGHT,  SWRD_R,                ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
-        ________,  MLIN_L,    TABL,________,    TABR,  MLIN_R,                ________,________,________,________,________,________,
+         KC_PGUP,________,    TABL,   KC_UP,    TABR,________,                 KC_HOME,________,________,________,________,   RESET,
+         KC_PGDN,  MWRD_L, KC_LEFT, KC_DOWN, KC_RGHT,  MWRD_R,                  KC_END, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
+        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
+    // TBD: Text selection (SWRD_L, SWRD_R)
 
-    // Special characters
+
+    // Special character
     [_SPE] = LAYOUT_split_3x6_3(
 
            L_SQM, GACCENT,   TILDE,   DQUOT,  APOSTR,   PRCNT,                    NMBR,   COLON, SMCOLON,________,________,   R_SQM,

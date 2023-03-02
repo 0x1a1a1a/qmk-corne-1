@@ -55,9 +55,16 @@ bool in_tab = false;
 #define DND      HYPR(KC_N) // Do Not Disturb
 #define ALFRD    HYPR(KC_S) // Alfred
 #define SS_OPT   S(G(KC_5)) // Screenshot and recording options
+
 #define MCTRL    C(KC_UP) // Mission Control
 #define SPC_L    C(KC_LEFT) // Move left a space
 #define SPC_R    C(KC_RGHT) // Move right a space
+#define DSKTP1   HYPR(KC_Q) // Switch to Desktop 1
+#define DSKTP2   HYPR(KC_W) // Switch to Desktop 2
+#define DSKTP3   HYPR(KC_E) // Switch to Desktop 3
+#define DSKTP4   HYPR(KC_R) // Switch to Desktop 4
+#define DSKTP5   HYPR(KC_T) // Switch to Desktop 5
+
 #define LCKSCR   C(G(KC_Q)) // Lock Screen
 #define NOTIF    HYPR(KC_H) // Show Notification Centre
 
@@ -129,5 +136,7 @@ bool in_tab = false;
 
 
 // Select text
-#define SWRD_L   S(A(KC_LEFT)) // Previous word
-#define SWRD_R   S(A(KC_RGHT)) // Next word
+#define SSYM_L   S(KC_LEFT) // Select a previous letter
+#define SSYM_R   S(KC_RGHT) // Select a next letter
+#define SWRD_L   S(A(KC_LEFT)) // Select a previous word
+#define SWRD_R   S(A(KC_RGHT)) // Select a next word

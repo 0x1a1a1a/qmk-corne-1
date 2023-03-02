@@ -1,15 +1,10 @@
-
-
-
+// Tap Dance
 
 // Custom tap dance keys
 enum {
-    __CN = SAFE_RANGE,
+    __CN,
     __EN
 };
-
-
-
 
 // Functions associated with individual tap dances
 void cn_finished(qk_tap_dance_state_t *state, void *user_data);

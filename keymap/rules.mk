@@ -21,7 +21,9 @@ BLUETOOTH_ENABLE       = no           # Bluetooth
 
 BOOTLOADER             = atmel-dfu    # Bootloader for Corne's R2G ATmega32U4
 
-COMBO_ENABLE           = yes          # Combo
+BOOTMAGIC_ENABLE       = no           # Enable Bootmagic Lite
+
+COMBO_ENABLE           = yes          # Key combo feature
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
 
 COMMAND_ENABLE         = no           # Commands for debug and configuration
@@ -32,9 +34,14 @@ CONSOLE_ENABLE         = no           # Console for debug
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/faq_debug.md
                                       # Set "no" to reduce firmwire size
 
-EXTRAFLAGS            += -flto        # Extra flags for Link Time Optimization
+CUSTOM_MATRIX          = no           # Replace the standard matrix scanning routine with a custom one
+
+EXTRAFLAGS             += -flto       # Extra flags for Link Time Optimization
                                       # https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
                                       # Set to reduce firmwire size
+
+DYNAMIC_TAPPING_TERM_ENABLE = no      # Dynamic Tapping Tferm
+                                      # https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#dynamic-tapping-term-iddynamic-tapping-term
 
 EXTRAKEY_ENABLE        = yes          # Multimedia and system keys support
                                       # Required for volume and brightness control
@@ -46,6 +53,9 @@ GRAVE_ESC_ENABLE       = no           # Grave Escape
 KEY_LOCK_ENABLE        = no           # Key Lock
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_key_lock.md
                                       # Set "no" to reduce firmwire size
+
+KEY_OVERRIDE_ENABLE    = no           # Key Overrides
+                                      # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_key_overrides.md
 
 LTO_ENABLE             = yes          # Link Time Optimization
                                       # Set "yes" to reduce firmwire size
