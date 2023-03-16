@@ -17,31 +17,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // English layout
     [_ENG] = LAYOUT_split_3x6_3(
 
-          HYPHEN,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  R_SQM,
+           R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
                                           LANG_EN,TD(__CN),  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
 
     ),
 
-
-//     // Ukrainian layout
-//     [_UKR] = LAYOUT_split_3x6_3(
-// 
-//           HYPHEN,   UA_JU,   UA_MZ,    UA_U,    UA_E,   UA_CH,                    UA_H,    UA_P,    UA_K,    UA_D,   UA_SH,    RSQM,
-//            COMMA,   UA_JI,    UA_I,    UA_A,    UA_N,    UA_G,                    UA_Z,    UA_O,    UA_V,    UA_Y,    UA_C,  PERIOD,
-//            QMARK,   UA_ZH,   UA_JA,    UA_M,    UA_S,    UA_J,                    UA_N,    UA_T,    UA_L,    UA_P,   UA_JE,   EMARK,
-//                                           LANG_EN, __CNTRL,  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
-// 
-//     ),
-
-
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_MUTE,  DSKTP1,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   ALFRD,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
-         KC_VOLU,    REDO,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
-         KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,   CTAB0,                     DND,  SS_OPT,________,________, KC_CAPS, KC_BRID,
+          LCKSCR,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   ALFRD,   SPC_L,   MCTRL,   SPC_R,________, KC_MUTE,
+         KC_BRIU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_VOLU,
+         KC_BRID,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,  SS_OPT,________,________, KC_CAPS, KC_VOLD,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -60,14 +48,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Navigation
     [_NAV] = LAYOUT_split_3x6_3(
 
-         KC_PGUP,________,    TABL,   KC_UP,    TABR,________,                 KC_HOME,________,________,________,________,   RESET,
+         KC_PGUP,    TABL,  MWRD_L,   KC_UP,  MWRD_R,    TABR,                 KC_HOME,________,________,________,________,________,
          KC_PGDN,  MWRD_L, KC_LEFT, KC_DOWN, KC_RGHT,  MWRD_R,                  KC_END, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
-        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________,________,
+        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________, QK_BOOT,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
-
-    // TBD: Text selection (SWRD_L, SWRD_R)
 
 
     // Special character

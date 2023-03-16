@@ -6,7 +6,7 @@
 const uint16_t PROGMEM arrows[] = {KC_W, KC_E, COMBO_END};
 // const uint16_t PROGMEM en[] = {KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM navigation[] = {KC_E, KC_R, COMBO_END};
-const uint16_t PROGMEM special[] = {KC_-C, KC_V, COMBO_END};
+const uint16_t PROGMEM special[] = {KC_C, KC_V, COMBO_END};
 // const uint16_t PROGMEM ua[] = {KC_C, KC_V, COMBO_END};
 
 
