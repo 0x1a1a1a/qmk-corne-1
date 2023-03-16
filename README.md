@@ -1,1 +1,1 @@
-## inununit's main keymap for Corne R2G
+## Keymap for Corne R2G on QMK
