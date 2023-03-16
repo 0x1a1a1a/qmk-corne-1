@@ -7,7 +7,8 @@
 4. Run `qmk compile -kb crkbd/r2g -km qmk_keymap_crkbd-1`
 
 ## To do
-- [ ] Add [“minus” symbol](https://www.compart.com/en/unicode/U+2212)
+- [ ] Add [Minus Sign](https://www.compart.com/en/unicode/U+2212)
+- [ ] Add [Hryvnia Sign](https://www.compart.com/en/unicode/U+20B4)
 - [ ] Set up [QMK CLI Configuration to qmk.ini](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md)
 - [ ] Add text selection layer
 - [ ] Visualize the keymap
