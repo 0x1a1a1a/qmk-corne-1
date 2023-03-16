@@ -27,9 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-          LCKSCR,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   ALFRD,   SPC_L,   MCTRL,   SPC_R,________, KC_MUTE,
-         KC_BRIU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                   NOTIF, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_VOLU,
-         KC_BRID,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,  SS_OPT,________,________, KC_CAPS, KC_VOLD,
+          LCKSCR,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,   SPTLT,                  SS_OPT,   SPC_L,   MCTRL,   SPC_R,________, KC_MUTE,
+         KC_BRIU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_VOLU,
+         KC_BRID,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________,________,________, KC_CAPS, KC_VOLD,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -59,9 +59,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Special character
     [_SPE] = LAYOUT_split_3x6_3(
 
-           L_SQM, GACCENT,   TILDE,   DQUOT,  APOSTR,   PRCNT,                    NMBR,   COLON, SMCOLON,________,________,   R_SQM,
-           L_DQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_DQM,
-          UNDRSC,   VLINE,   MSIGN, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   HLINE,   MDASH,   NDASH,
+         GACCENT,   TILDE,________,  APOSTR,   DQUOT,    NMBR,                   PRCNT,   COLON, SMCOLON,   HLINE,   MDASH,   NDASH,
+           L_SQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_SQM,
+           L_DQM,  UNDRSC,   MSIGN, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   VLINE,________,   R_DQM,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
