@@ -73,7 +73,7 @@ MOUSEKEY_ENABLE        = yes          # Mouse keys
 NKRO_ENABLE            = yes          # N-Key Rollover
                                       # Set "no" to reduce firmwire size (default 6KRO could be enough)
 
-OLED_DRIVER_ENABLE     = no           # OLED
+OLED_ENABLE            = no           # OLED
                                       # Set "no" to reduce firmwire size
 
 RGB_MATRIX_ENABLE      = no           # Correct LED lightning mode
