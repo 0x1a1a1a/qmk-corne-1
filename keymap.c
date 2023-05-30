@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_MUTE,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                     DND,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
+         KC_MUTE,    REDO,  DSKTP3,  DSKTP4,  DSKTP5,  DSKTP6,                     DND,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
          KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
          KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,________,________,________, KC_CAPS, KC_BRID,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_PGUP,    TABL,  MWRD_L,   KC_UP,  MWRD_R,    TABR,                 KC_HOME,________,________,________,________,________,
          KC_PGDN,  MWRD_L, KC_LEFT, KC_DOWN, KC_RGHT,  MWRD_R,                  KC_END, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
-        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________, QK_BOOT,
+        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
