@@ -12,7 +12,7 @@
 - [ ] Set up [QMK CLI Configuration to qmk.ini](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md)
 - [ ] Add text selection layer
 - [ ] Visualize the keymap
-- ~~ Set up `QK_MAKE` [Quantum Keycode](https://github.com/qmk/qmk_firmware/blob/master/docs/quantum_keycodes.md)~~
+- ~~Set up `QK_MAKE` [Quantum Keycode](https://github.com/qmk/qmk_firmware/blob/master/docs/quantum_keycodes.md)~~
     - Removed `QK_BOOT`
 
 ## Useful links
