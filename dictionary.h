@@ -52,16 +52,18 @@ bool in_tab = false;
 
 // macOS
 #define EMOJI    C(G(KC_SPC)) // Emoji & Symbols
-#define DND      HYPR(KC_N) // Do Not Disturb
+#define DND      HYPR(KC_Y) // Do Not Disturb
 #define SS_OPT   S(G(KC_5)) // Screenshot and recording options
+#define SPTLT    HYPR(KC_N) // Run Spotlight
 
 #define MCTRL    C(KC_UP) // Mission Control
 #define SPC_L    C(KC_LEFT) // Move left a space
 #define SPC_R    C(KC_RGHT) // Move right a space
-#define DSKTP2   HYPR(KC_W) // Switch to Desktop 2
-#define DSKTP3   HYPR(KC_E) // Switch to Desktop 3
-#define DSKTP4   HYPR(KC_R) // Switch to Desktop 4
-#define SPTLT    HYPR(KC_T) // Run Spotlight
+
+#define DSKTP3   HYPR(KC_W) // Switch to Desktop 3
+#define DSKTP4   HYPR(KC_E) // Switch to Desktop 4
+#define DSKTP5   HYPR(KC_R) // Switch to Desktop 5
+#define DSKTP6   HYPR(KC_T) // Switch to Desktop 6
 
 #define LCKSCR   C(G(KC_Q)) // Lock Screen
 #define NOTIF    HYPR(KC_H) // Show Notification Centre

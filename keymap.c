@@ -27,9 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_BRIU,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,   SPTLT,                  SS_OPT,   SPC_L,   MCTRL,   SPC_R,________, KC_VOLU,
-         KC_BRID,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_VOLD,
-          LCKSCR,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________,________,________, KC_CAPS, KC_MUTE,
+         KC_MUTE,    REDO,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                     DND,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
+         KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
+         KC_VOLD,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,________,________,________, KC_CAPS, KC_BRID,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
