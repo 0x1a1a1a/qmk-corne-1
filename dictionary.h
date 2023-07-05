@@ -5,29 +5,19 @@
 
 // Short aliases for layers and priority
 enum layers {
-    _ENG = 0,
-    _UKR = 1,
-    _NAV = 2,
-    _SPE = 3,
-    _NMT = 4,
-    _CON = 5,
-    _NUM = 6,
+    _TXT = 0,
+    _CON = 1,
+    _NUM = 2,
+    _NAV = 3,
+    _SPE = 4,
+    _NMT = 5,
 };
 
 
 enum custom_keycodes {
     LANG_EN = SAFE_RANGE,
     LANG_UA,
-    CTAB0,
 };
-
-
-// Advanced Command+Tab
-bool is_cmdtab1_active = false;
-bool is_cmdtab2_active = false;
-uint16_t cmdtab1_timer = 0;
-uint16_t cmdtab2_timer = 0;
-bool in_tab = false;
 
 
 // Full aliases for layers

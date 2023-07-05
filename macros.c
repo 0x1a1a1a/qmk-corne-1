@@ -13,7 +13,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         else {
             unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
-            layer_move(_ENG);
+            layer_move(_TXT);
         }
         break;
 
@@ -24,7 +24,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         else {
             unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
-            layer_move(_ENG);
+            layer_move(_TXT);
         }
         break;
 

@@ -6,30 +6,27 @@
 #include "dictionary.h"
 #include "macros.c"
 #include "combos.c"
-// #include "tapdances.c"
-
-
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
-    // English layout
-    [_ENG] = LAYOUT_split_3x6_3(
+    // Text input layout
+    [_TXT] = LAYOUT_split_3x6_3(
 
            R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                          LANG_EN,TD(__CN),  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
+                                          LANG_EN, __CNTRL,  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
 
     ),
 
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_MUTE,  DSKTP3,  DSKTP4,  DSKTP5,  DSKTP6,  DSKTP7,                     DND,   SPC_L,   MCTRL,   SPC_R,________,  LCKSCR,
-         KC_VOLU,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRIU,
-         KC_VOLDREDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,________,________,________, KC_CAPS, KC_BRID,
+         KC_VOLU,  DSKTP3,  DSKTP4,  DSKTP5,  DSKTP6,  DSKTP7,                     DND,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
+         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,________,________,________,________, KC_CAPS,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
