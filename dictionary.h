@@ -5,12 +5,12 @@
 
 // Short aliases for layers and priority
 enum layers {
-    _TXT = 0,
-    _CON = 1,
-    _NUM = 2,
-    _NAV = 3,
-    _SPE = 4,
-    _NMT = 5,
+    _TXT = 0, // “Text“ input
+    _NAV = 1, // Navigation
+    _SPE = 2, // Special characters
+    _NUM = 4, // Numpad. Should be above “Navigation” layer to be accessible
+    _CON = 5, // macOS controls and apps. Should be above other layers to be accessible from any of them
+    _NMT = 3, // No Mod-Taps
 };
 
 
@@ -61,8 +61,8 @@ enum custom_keycodes {
 
 
 // Chrome
-#define TABL     G(S(KC_LBRC)) // Go to the previous tab
-#define TABR     G(S(KC_RBRC)) // Go to the next tab
+#define TAB_L    G(S(KC_LBRC)) // Go to the previous tab
+#define TAB_R    G(S(KC_RBRC)) // Go to the next tab
 
 
 // Commands
@@ -120,10 +120,10 @@ enum custom_keycodes {
 
 
 // Place the insertion point
-#define MWRD_L   A(KC_LEFT) // To the beginning of the previous word
-#define MWRD_R   A(KC_RGHT) // To the end of the next word
-#define MLIN_L   G(KC_LEFT) // To the beginning of the line
-#define MLIN_R   G(KC_RGHT) // To the end of the line
+#define M_WRD_L  A(KC_LEFT) // To the beginning of the previous word
+#define M_WRD_R  A(KC_RGHT) // To the end of the next word
+#define M_LIN_L  G(KC_LEFT) // To the beginning of the line
+#define M_LIN_R  G(KC_RGHT) // To the end of the line
 
 
 // Select text

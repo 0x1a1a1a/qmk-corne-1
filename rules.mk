@@ -11,7 +11,7 @@ APPLE_FN_ENABLE        = yes
 AUDIO_ENABLE           = no           # Audio output (port C6)
                                       # Set "no" to save space
 
-# BACKLIGHT_ENABLE     = no           # Backlight
+BACKLIGHT_ENABLE       = no           # Backlight
                                       # Set "no" to save space
 
 # BACKLIGHT_DRIVER     = pwm
