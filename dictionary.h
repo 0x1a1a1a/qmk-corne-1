@@ -60,10 +60,11 @@ bool in_tab = false;
 #define SPC_L    C(KC_LEFT) // Move left a space
 #define SPC_R    C(KC_RGHT) // Move right a space
 
-#define DSKTP3   HYPR(KC_W) // Switch to Desktop 3
-#define DSKTP4   HYPR(KC_E) // Switch to Desktop 4
-#define DSKTP5   HYPR(KC_R) // Switch to Desktop 5
-#define DSKTP6   HYPR(KC_T) // Switch to Desktop 6
+#define DSKTP3   HYPR(KC_Q) // Switch to Desktop 3
+#define DSKTP4   HYPR(KC_W) // Switch to Desktop 4
+#define DSKTP5   HYPR(KC_E) // Switch to Desktop 5
+#define DSKTP6   HYPR(KC_R) // Switch to Desktop 6
+#define DSKTP7   HYPR(KC_T) // Switch to Desktop 7
 
 #define LCKSCR   C(G(KC_Q)) // Lock Screen
 #define NOTIF    HYPR(KC_H) // Show Notification Centre
