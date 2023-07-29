@@ -1,5 +1,6 @@
 ## Inter’s keymap for Corne 1 on QMK
 
+
 #### Instructions for installation
 1. Install the QMK with `brew install qmk/qmk/qmk`
 2. Move to `repos` folder and run `qmk setup`. Clone the `qmk_firmware` repository

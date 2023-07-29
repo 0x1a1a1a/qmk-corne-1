@@ -6,6 +6,13 @@
 - [ ] Add arrows symbols (a dedicated layer?)
 - [ ] Add text selection (a dedicated layer?)
 - [ ] Add mouse keys (a dedicated layer?)
+- [ ] Add `Insert` key
+
+
+#### In progress: v2
+- [ ] Adapted for new EN2.keylayout file
+    - Added backups 
+    - **Why**: There are overlaps in current shortcuts (which use Option) with system shortcuts
 
 
 #### Current: v1.3
