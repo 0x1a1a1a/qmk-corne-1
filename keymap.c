@@ -4,7 +4,6 @@
 
 // Include headers for the keymap
 #include "dictionary.h"
-#include "macros.c"
 #include "combos.c"
 
 
@@ -17,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                          LANG_EN, __CNTRL,  KC_SPC,     KC_BSPC, __NMBRS, LANG_UA
+                                         TO(_TXT),MO(_CON),  KC_SPC,     KC_BSPC,MO(_NUM), TO(_TXT)
 
     ),
 

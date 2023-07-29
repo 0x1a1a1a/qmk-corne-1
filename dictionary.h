@@ -19,11 +19,6 @@ enum custom_keycodes {
 };
 
 
-// Full aliases for layers
-#define __CNTRL  MO(_CON)
-#define __NMBRS  MO(_NUM)
-
-
 // 8-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
 #define ________ KC_NO
 
