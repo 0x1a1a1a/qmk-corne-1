@@ -40,7 +40,7 @@ EXTRAFLAGS             += -flto       # Extra flags for Link Time Optimization
                                       # https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
                                       # Set to reduce firmwire size
 
-DYNAMIC_TAPPING_TERM_ENABLE = no      # Dynamic Tapping Tferm
+DYNAMIC_TAPPING_TERM_ENABLE = no      # Dynamic Tapping Term
                                       # https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#dynamic-tapping-term-iddynamic-tapping-term
 
 EXTRAKEY_ENABLE        = yes          # Multimedia and system keys support

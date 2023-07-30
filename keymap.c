@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU,  DSKTP3,  DSKTP4,  DSKTP5,  DSKTP6,  DSKTP7,                     DND,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,________, QK_BOOT,________,________, KC_CAPS,
+            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,  KC_INS, QK_BOOT,________,________, KC_CAPS,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
