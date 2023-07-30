@@ -9,13 +9,19 @@
 - [ ] Add `Insert` key
 
 
-#### In progress: v2
-- [ ] Adapted for new EN2.keylayout file
-    - Added backups 
-    - **Why**: There are overlaps in current shortcuts (which use Option) with system shortcuts
+#### v2 (Current)
+- [x] Adapted for new EN2.keylayout file
+    - **Why**: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
+    - [x] Added temporary backup folder for previous version
+    - [x] Optimized the dictionary with Meh key support
+    - [x] Restructured the dictionary
+- [x] Changed approach to language switch
+    - [x] Added new layers `S01` and `S02`
+    - [x] Removed Mute combo because it was assigned to previous switch keys
+    - [x] Created a test layer with temporary shortcuts
 
 
-#### Current: v1.3
+#### v1.3
 - [x] Fixed layer order for layer accessibility
 - [x] Optimized names for several aliases
 - [x] Optimized “Navigation” layer
