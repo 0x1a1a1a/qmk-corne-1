@@ -10,22 +10,22 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
-    // Text input layout
-    [_TXT] = LAYOUT_split_3x6_3(
+    // Letters
+    [_LET] = LAYOUT_split_3x6_3(
 
            R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                         TO(_TXT),MO(_CON),  KC_SPC,     KC_BSPC,MO(_NUM), TO(_TXT)
+                                         TO(_LET),MO(_CON),  KC_SPC,     KC_BSPC,MO(_NUM), TO(_LET)
 
     ),
 
     // macOS controls and apps
     [_CON] = LAYOUT_split_3x6_3(
 
-         KC_VOLU,  DSKTP3,  DSKTP4,  DSKTP5,  DSKTP6,  DSKTP7,                     DND,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
+         KC_VOLU,  DSKTP1,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   SPTLT,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                   SPTLT,  KC_INS, QK_BOOT,________,________, KC_CAPS,
+            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________, QK_BOOT,________,________, KC_CAPS,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -55,23 +55,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Special characters
     [_SPE] = LAYOUT_split_3x6_3(
 
-         GACCENT,   TILDE,________,  APOSTR,   DQUOT,    NMBR,                   PRCNT,   COLON, SMCOLON,   HLINE,   MDASH,   NDASH,
+         GACCENT,   TILDE,   VLINE,   DQUOT,  APOSTR,    NMBR,                   PRCNT,   COLON, SMCOLON,   HLINE,   MDASH,   NDASH,
            L_SQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_SQM,
-           L_DQM,   MSIGN,  UNDRSC, KC_PSLS,     BUL,   AMPRD,                    DLLR,    WBUL,   BSLSH,   VLINE,________,   R_DQM,
+           L_DQM,   MSIGN,  UNDRSC,     SOL,     BUL,   AMPRD,                    DLLR,    HRVN,    RSOL,    WBUL,    MDOT,   R_DQM,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
 
-    // Without Mod-Taps
+    // Test
     [_NMT] = LAYOUT_split_3x6_3(
 
-          HYPHEN,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   R_SQM,
-           COMMA,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  PERIOD,
-        ________,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,________,
+           KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
+          KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,                  KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F,
+         KC_EJCT,  KC_INS,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     )
+
+
+    // // Without Mod-Taps
+    // [_NMT] = LAYOUT_split_3x6_3(
+
+    //       HYPHEN,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   R_SQM,
+    //        COMMA,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  PERIOD,
+    //     ________,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,________,
+    //                                       KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
+
+    // )
 
 
 };
