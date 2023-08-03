@@ -1,8 +1,13 @@
+<!--
+
+Changelog
+
+-->
+
+
 #### Up next
 - [ ] Set up [QMK CLI Configuration to qmk.ini](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md)
 - [ ] Visualize the keymap
-- [ ] Add [Hryvnia Sign](https://www.compart.com/en/unicode/U+20B4)
-- [ ] Add [Middle Dot](https://www.compart.com/en/unicode/U+00B7)
 - [ ] Add arrows symbols (a dedicated layer?)
 - [ ] Add text selection (a dedicated layer?)
 - [ ] Add mouse keys (a dedicated layer?)
@@ -15,6 +20,8 @@
     - [x] Added temporary backup folder for previous version
     - [x] Optimized the dictionary with Meh key support
     - [x] Restructured the dictionary
+    - [x] Added [Hryvnia Sign](https://www.compart.com/en/unicode/U+20B4)
+    - [x] Add [Middle Dot](https://www.compart.com/en/unicode/U+00B7)
 - [x] Changed approach to language switch
     - [x] Added new layers `S01` and `S02`
     - [x] Removed Mute combo because it was assigned to previous switch keys

@@ -1,5 +1,9 @@
+//
 // Macros
+//
 
+
+// Change language and switch to a layer with letters
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
@@ -9,22 +13,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     	case LANG_EN:
         if (record->event.pressed) {
-            register_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
+            register_code16(LOPT(LSFT(LCTL(KC_KP_8))));
         }
         else {
-            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_V)))));
-            layer_move(_TXT);
+            unregister_code16(LOPT(LSFT(LCTL(KC_KP_8))));
+            layer_move(_LTR);
         }
         break;
 
 
 		case LANG_UA:
         if (record->event.pressed) {
-            register_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
+            register_code16(LOPT(LSFT(LCTL(KC_KP_9))));
         }
         else {
-            unregister_code16(LCMD(LOPT(LSFT(LCTL(KC_C)))));
-            layer_move(_TXT);
+            unregister_code16(LOPT(LSFT(LCTL(KC_KP_9))));
+            layer_move(_LTR);
         }
         break;
 

@@ -1,17 +1,22 @@
+//
+// Dictionary
+//
+
+
 // Multiple-include optimization. Include a header file only a single time, no matter how many times it has been imported
 #pragma once
 
 
 // Layers: aliases and priority
 enum layers {
-    _LET = 0,                                      // Letters
+    _LTR = 0,                                      // Letters
     _NAV = 1,                                      // Navigation
-    _SPE = 2,                                      // Special characters
+    _SPC = 2,                                      // Special characters
     _NMT = 3,                                      // A layer without mod-taps
-    _S01 = 4,                                      // Service layer 1 (new switch to English and Ukrainian)
-    _S02 = 5,                                      // Service layer 2 (new switch to English and Ukrainian)
-    _NUM = 6,                                      // Numpad. Should be above “Navigation” layer for accessibiIty
-    _CON = 7,                                      // macOS shortcuts. Should be above other layers for accessibility from any of them
+    _NUM = 4,                                      // Numpad. Should be above “Navigation” layer for accessibiIty
+    _CTR = 5,                                      // macOS shortcuts. Should be above other layers for accessibility from any of them
+    _S01 = 6,                                      // Service layer 1 (new switch to English and Ukrainian)
+    _S02 = 7,                                      // Service layer 2 (new switch to English and Ukrainian)
 };
 
 
@@ -24,6 +29,11 @@ enum custom_keycodes {
 
 // 8-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
 #define ________ KC_NO
+
+
+// Language switch (also used in macros.c)
+#define L_EN   MEH(KC_KP_8)
+#define L_UA   MEH(KC_KP_9)
 
 
 //
