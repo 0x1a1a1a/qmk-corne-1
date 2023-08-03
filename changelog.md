@@ -14,7 +14,13 @@ Changelog
 - [ ] Add `Insert` key
 
 
-#### v2 (Current)
+#### v2.1
+- [x] Added a layer for language switching
+- [x] Moved QK_BOOT and KC_CAPS to S01 layer
+  - Why: To avoid false positives
+
+
+#### v2
 - [x] Adapted for new EN2.keylayout file
     - **Why**: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
     - [x] Added temporary backup folder for previous version

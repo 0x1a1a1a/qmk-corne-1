@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU,  DSKTP1,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   SPTLT,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________, QK_BOOT,________,________, KC_CAPS,
+            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -85,9 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Service layer 1
     [_S01] = LAYOUT_split_3x6_3(
 
-          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________,________,________,________,________,
+          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________, QK_BOOT,________,________,________,
         ________,________,________,________,________,________,                ________,________,________,________,________,________,
-        ________,________,________, LANG_UA, LANG_EN,________,                ________,________,________,________,________,________,
+         KC_CAPS,________,________, LANG_UA, LANG_EN,________,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
