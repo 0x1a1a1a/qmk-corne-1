@@ -12,6 +12,7 @@ Changelog
 - [ ] Add text selection (a dedicated layer?)
 - [ ] Add mouse keys (a dedicated layer?)
 - [ ] Add `Insert` key
+- [ ] Add `Delete` button (Command-Backspace)
 
 
 #### v2.1

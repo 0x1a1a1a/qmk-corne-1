@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          GACCENT,   TILDE,   VLINE,   DQUOT,  APOSTR,    NMBR,                   PRCNT,   COLON, SMCOLON,   HLINE,   MDASH,   NDASH,
            L_SQM,   L_CUR,   L_ANG,   L_SQR,   L_RND,   ATSGN,                   CARET,   R_RND,   R_SQR,   R_ANG,   R_CUR,   R_SQM,
-           L_DQM,   MSIGN,  UNDRSC,     SOL,     BUL,   AMPRD,                    DLLR,    HRVN,    RSOL,    WBUL,    MDOT,   R_DQM,
+           L_DQM,   MSIGN,    HRVN,  UNDRSC,     SOL,   AMPRD,                    DLLR,    RSOL,     BUL,    WBUL,    MDOT,   R_DQM,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Service layer 1
     [_S01] = LAYOUT_split_3x6_3(
 
-          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________, QK_BOOT,________,________,________,
+          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________,________,________,________, QK_BOOT,
         ________,________,________,________,________,________,                ________,________,________,________,________,________,
          KC_CAPS,________,________, LANG_UA, LANG_EN,________,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
