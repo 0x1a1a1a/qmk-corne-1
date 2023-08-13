@@ -9,7 +9,6 @@
 
 // Include headers for the keymap
 #include "dictionary.h"
-#include "combos.c"
 #include "macros.c"
 
 
@@ -85,9 +84,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Service layer 1
     [_S01] = LAYOUT_split_3x6_3(
 
-          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________,________,________,________, QK_BOOT,
-        ________,________,________,________,________,________,                ________,________,________,________,________,________,
-         KC_CAPS,________,________, LANG_UA, LANG_EN,________,                ________,________,________,________,________,________,
+          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________, QK_BOOT,________,________,________,
+        ________,  LTRCTL,  LTRSFT,  LTROPT,  LTRCMD,________,                ________,________,________,________,________,________,
+         KC_CAPS,________,________,   LTRUA,   LTREN,________,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
