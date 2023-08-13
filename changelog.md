@@ -18,14 +18,14 @@ Changelog
 #### v2.1
 - [x] Added a layer for language switching
 - [x] Moved QK_BOOT and KC_CAPS to S01 layer
-  Why: To avoid false positives
+    Why: To avoid false positives
 - [x] Moved `combos.c` file to the archive and removed the link in `keymap.c`
-  Why: Combos requires more finger strength (and, therefore, energy) to activate
+    Why: Combos requires more finger strength (and, therefore, energy) to activate
 
 
 #### v2
 - [x] Adapted for new EN2.keylayout file
-  Why: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
+    Why: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
     - [x] Added temporary backup folder for previous version
     - [x] Optimized the dictionary with Meh key support
     - [x] Restructured the dictionary
