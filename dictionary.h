@@ -14,16 +14,19 @@ enum layers {
     _SPC = 2,                                      // Special characters
     _NMT = 3,                                      // A layer without mod-taps
     _NUM = 4,                                      // Numpad. Should be above “Navigation” layer for accessibiIty
-    _CTR = 5,                                      // macOS shortcuts. Should be above other layers for accessibility from any of them
-    _S01 = 6,                                      // Service layer 1 (new switch to English and Ukrainian)
-    _S02 = 7,                                      // Service layer 2 (new switch to English and Ukrainian)
+    _CTL = 5,                                      // macOS shortcuts. Should be above other layers for accessibility from any of them
+    _CTR = 6,                                      // Service layer 1 (new switch to English and Ukrainian)
 };
 
 
 // Language switch: aliases
 enum custom_keycodes {
-    LANG_EN = SAFE_RANGE,
-    LANG_UA,
+    LTREN = SAFE_RANGE,
+    LTRUA,
+    LTRCMD,
+    LTROPT,
+    LTRSFT,
+    LTRCTL,
 };
 
 
@@ -136,23 +139,16 @@ enum custom_keycodes {
 //
 
     //
-    #define SPTLT    MEH(KC_PPLS)                  // Run Spotlight
+    #define RCAST    MEH(KC_PPLS)                  // Run Raycast
+    #define EMOJI    C(G(KC_SPC))                  // Emoji & Symbols. Not reassignable
     #define SS_OPT   MEH(KC_PMNS)                  // Screenshot and recording options
     #define DND      MEH(KC_PAST)                  // Do Not Disturb
-
-    //
     #define LCKSCR   C(G(KC_Q))                    // Lock Screen. Not reassignable
-    #define EMOJI    C(G(KC_SPC))                  // Emoji & Symbols. Not reassignable
 
     // Mission Control
-    #define MCTRL    MEH(KC_KP_0)                  // Mission Control
-    #define SPC_L    MEH(KC_KP_1)                  // Move left a space
-    #define SPC_R    MEH(KC_KP_2)                  // Move right a space
     #define DSKTP1   MEH(KC_KP_3)                  // Switch to Desktop 1
     #define DSKTP2   MEH(KC_KP_4)                  // Switch to Desktop 2
     #define DSKTP3   MEH(KC_KP_5)                  // Switch to Desktop 3
-    #define DSKTP4   MEH(KC_KP_6)                  // Switch to Desktop 4
-    #define DSKTP5   MEH(KC_KP_7)                  // Switch to Desktop 5
 
     //
     #define UNDO     G(KC_Z)                       // Undo

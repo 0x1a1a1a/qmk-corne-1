@@ -7,7 +7,7 @@
 #include QMK_KEYBOARD_H
 
 
-// Include headers for the keymap
+// Include headers and other components
 #include "dictionary.h"
 #include "macros.c"
 
@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
            COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                    KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
            QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                         TO(_S01),TO(_CTR),  KC_SPC,     KC_BSPC,TO(_NUM), TO(_S02)
+                                         ________,TO(_CTL),  KC_SPC,     KC_BSPC,TO(_CTR),  KC_DEL
 
     ),
 
@@ -70,23 +70,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
-    // macOS controls and apps
-    [_CTR] = LAYOUT_split_3x6_3(
+    // Controls left
+    [_CTL] = LAYOUT_split_3x6_3(
 
-         KC_VOLU,  DSKTP1,  DSKTP2,  DSKTP3,  DSKTP4,  DSKTP5,                   SPTLT,   SPC_L,   MCTRL,   SPC_R,________, KC_BRIU,
-         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                  SS_OPT, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-            REDO,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                     DND,________,________,________,________,________,
+         KC_VOLU,    REDO,  DSKTP1,  DSKTP2,  DSKTP3,   RCAST,                ________,________,________,________, QK_BOOT, KC_BRIU,
+         KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
+        ________,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
 
-    // Service layer 1
-    [_S01] = LAYOUT_split_3x6_3(
+    // Controls right
+    [_CTR] = LAYOUT_split_3x6_3(
 
-          LCKSCR,________,________,TO(_SPC),TO(_NAV),________,                ________,________, QK_BOOT,________,________,________,
-        ________,  LTRCTL,  LTRSFT,  LTROPT,  LTRCMD,________,                ________,________,________,________,________,________,
-         KC_CAPS,________,________,   LTRUA,   LTREN,________,                ________,________,________,________,________,________,
+        ________,________,________,________,________,________,                ________,TO(_NAV),TO(_NUM),TO(_SPC),________,  LCKSCR,
+        ________,________,________,________,________,________,                  SS_OPT,  LTRCMD,  LTROPT,  LTRSFT,  LTRCTL,________,
+        ________,________,________,________,________,________,                ________,   LTREN,   LTRUA,________,________,     DND,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
