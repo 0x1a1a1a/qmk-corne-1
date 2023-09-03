@@ -21,12 +21,12 @@ enum layers {
 
 // Language switch: aliases
 enum custom_keycodes {
-    LTREN = SAFE_RANGE,
-    LTRUA,
-    LTRCMD,
-    LTROPT,
-    LTRSFT,
-    LTRCTL,
+    LTR_EN = SAFE_RANGE,
+    LTR_UA,
+    LTR_CMD,
+    LTR_OPT,
+    LTR_SFT,
+    LTR_CTL,
 };
 
 
@@ -35,8 +35,8 @@ enum custom_keycodes {
 
 
 // Language switch (also used in macros.c)
-#define L_EN   MEH(KC_KP_8)
-#define L_UA   MEH(KC_KP_9)
+// #define L_EN   MEH(KC_KP_8)
+// #define L_UA   MEH(KC_KP_9)
 
 
 //

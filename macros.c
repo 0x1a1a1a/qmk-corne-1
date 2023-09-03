@@ -11,11 +11,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 
 
-    	case LTREN:
+    	case LTR_EN:
             if (record->event.pressed) {
                 register_code16(LOPT(LSFT(LCTL(KC_KP_8))));
             }
-qmk flash -kb crkbd/r2g -km qmk-corne-1
+
             else {
                 unregister_code16(LOPT(LSFT(LCTL(KC_KP_8))));
                 layer_move(_LTR);
@@ -24,7 +24,7 @@ qmk flash -kb crkbd/r2g -km qmk-corne-1
             break;
 
 
-		case LTRUA:
+		case LTR_UA:
             if (record->event.pressed) {
                 register_code16(LOPT(LSFT(LCTL(KC_KP_9))));
             }
@@ -37,7 +37,7 @@ qmk flash -kb crkbd/r2g -km qmk-corne-1
             break;
 
 
-        // case LTRCMD:
+        // case LTR_CMD:
         //     if (record->event.pressed) {
         //     // Key pressed
         //             layer_move(_LTR);
@@ -58,7 +58,7 @@ qmk flash -kb crkbd/r2g -km qmk-corne-1
         // break;
 
 
-        // case LTROPT:
+        // case LTR_OPT:
         // if (record->event.pressed) {
         //     // register_code16(LOPT(LSFT(LCTL(KC_KP_9))));
         // }
@@ -69,7 +69,7 @@ qmk flash -kb crkbd/r2g -km qmk-corne-1
         // break;
 
 
-        // case LTRSFT:
+        // case LTR_SFT:
         // if (record->event.pressed) {
         //     // register_code16(LOPT(LSFT(LCTL(KC_KP_9))));
         // }
@@ -79,7 +79,7 @@ qmk flash -kb crkbd/r2g -km qmk-corne-1
         // }
         // break;
 
-        // case LTRCTL:
+        // case LTR_CTL:
         // if (record->event.pressed) {
         //     // register_code16(LOPT(LSFT(LCTL(KC_KP_9))));
         // }
