@@ -10,7 +10,12 @@
 
 ### Release notes
 
-#### v2.1
+#### v3
+
+* Restructrued left split of `_SPC` layer
+
+
+#### v2
 
 * Moved `LCSCR`, `QK_BOOT` to reduce occasional press
 * Reorganized positions of `TO(_NUM)`, `TO(_NAV)` and `TO(_NAV)` at `_CTR` layer

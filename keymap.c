@@ -36,12 +36,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ),
 
+
     // Special characters
     [_SPC] = LAYOUT_split_3x6_3(
 
-         GACCENT,   TILDE,   L_SQM,   R_SQM,   L_SQR,   R_SQR,                    MDOT,  APOSTR, SMCOLON,   PRCNT,   CARET,   NDASH,
-             SOL,    RSOL,   L_DQM,   R_DQM,   L_RND,   R_RND,                     BUL,   DQUOT,   COLON,   ATSGN,    NMBR,   MDASH,
-           HLINE,   VLINE,   L_CUR,   R_CUR,   L_ANG,   R_ANG,                    WBUL,  UNDRSC,   AMPRD,    DLLR,    HRVN,   MSIGN,
+         GACCENT,   L_CUR,   R_CUR,   L_SQM,   R_SQM,    RSOL,                    MDOT,  APOSTR, SMCOLON,   PRCNT,   CARET,   NDASH,
+           TILDE,   L_SQR,   R_SQR,   L_RND,   R_RND,     SOL,                     BUL,   DQUOT,   COLON,   ATSGN,    NMBR,   MDASH,
+           HLINE,   L_ANG,   R_ANG,   L_DQM,   R_DQM,   VLINE,                    WBUL,  UNDRSC,   AMPRD,    DLLR,    HRVN,   MSIGN,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -85,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         ________,________,________,________,________,  LCKSCR,                ________,TO(_SPC),________,________,________,     DND,
         ________,________,________,________,TO(_NAV),________,                  SS_OPT,TO(_NUM),________,________,________,________,
-        ________,________,________,________,________,________,                  KC_DEL,  LTRCMD,  LTROPT,  LTRSFT,  LTRCTL,________,
+        ________,________,________,________,________,________,                  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
