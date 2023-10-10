@@ -138,17 +138,14 @@ enum custom_keycodes {
 // macOS shortcuts
 //
 
+
     //
     #define RCAST    MEH(KC_PPLS)                  // Run Raycast
     #define EMOJI    C(G(KC_SPC))                  // Emoji & Symbols. Not reassignable
     #define SS_OPT   MEH(KC_PMNS)                  // Screenshot and recording options
     #define DND      MEH(KC_PAST)                  // Do Not Disturb
-    #define LCKSCR   C(G(KC_Q))                    // Lock Screen. Not reassignable
+    #define MCTRL    MEH(KC_KP_3)                  // Mission Control
 
-    // Mission Control
-    #define DSKTP1   MEH(KC_KP_3)                  // Switch to Desktop 1
-    #define DSKTP2   MEH(KC_KP_4)                  // Switch to Desktop 2
-    #define DSKTP3   MEH(KC_KP_5)                  // Switch to Desktop 3
 
     //
     #define UNDO     G(KC_Z)                       // Undo
