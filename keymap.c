@@ -30,9 +30,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Navigation
     [_NAV] = LAYOUT_split_3x6_3(
 
-        ________,   TAB_L, M_WRD_L,   KC_UP, M_WRD_R,   TAB_R,                ________,________,________,________,________,________,
+        ________, M_LIN_L, M_WRD_L,   KC_UP, M_WRD_R, M_LIN_R,                ________,________,________,________,________,________,
         ________,________, KC_LEFT, KC_DOWN, KC_RGHT,________,                ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
-        ________, KC_HOME, M_LIN_L,________, M_LIN_R,  KC_END,                ________,________,________,________,________,________,
+        ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_L,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Controls right
     [_CTR] = LAYOUT_split_3x6_3(
 
-        ________,________,________,________,________,________,                ________,TO(_SPC),________,________,________,________,
+        ________,________,________,________,________,________,                ________,TO(_SPC),   TAB_L,   TAB_R,________,________,
         ________,________,________,________,________,________,                  SS_OPT,TO(_NUM),________,________,________,________,
         ________,________,________,________,________,________,                  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS

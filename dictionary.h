@@ -54,7 +54,7 @@ enum custom_keycodes {
     #define SSYM_L   S(KC_LEFT)                    // Select a previous letter
     #define SSYM_R   S(KC_RGHT)                    // Select a next letter
     #define SWRD_L   S(A(KC_LEFT))                 // Select a previous word
-    #define SWRD_R   S(A(KC_RGHT))                 // Select a next word
+    #define SWRD_L   S(A(KC_RGHT))                 // Select a next word
 
     // Chrome
     #define TAB_L    G(S(KC_LBRC))                 // Go to the previous tab
