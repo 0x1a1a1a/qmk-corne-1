@@ -155,3 +155,4 @@ enum custom_keycodes {
     #define PASTE    G(KC_V)                       // Paste
     #define XPASTE   S(G(KC_V))                    // Paste and Match Style
     #define SELALL   G(KC_A)                       // Select all
+    #define HIDE     G(KC_H)                       // Hide current app
