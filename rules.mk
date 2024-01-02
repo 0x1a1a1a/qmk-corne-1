@@ -23,7 +23,7 @@ BOOTLOADER                      = atmel-dfu # Bootloader for Corne's R2G ATmega3
 
 BOOTMAGIC_ENABLE                = no        # Enable Bootmagic Lite
 
-COMBO_ENABLE                    = yes       # Key combo feature
+COMBO_ENABLE                    = no        # Key combo feature
                                             # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
 
 COMMAND_ENABLE                  = no        # Commands for debug and configuration

@@ -41,8 +41,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Special characters
     [_SPC] = LAYOUT_split_3x6_3(
 
-         GACCENT,   L_CUR,   R_CUR,   L_SQM,   R_SQM,    RSOL,                    MDOT,   DQUOT,   COLON,   PRCNT,   CARET,   NDASH,
-           TILDE,   L_SQR,   R_SQR,   L_RND,   R_RND,     SOL,                     BUL,  APOSTR, SMCOLON,   ATSGN,    NMBR,   MDASH,
+         GACCENT,   L_CUR,   R_CUR,   L_SQM,   R_SQM,    RSOL,                    MDOT,  APOSTR, SMCOLON,   PRCNT,   CARET,   NDASH,
+           TILDE,   L_SQR,   R_SQR,   L_RND,   R_RND,     SOL,                     BUL,   DQUOT,   COLON,   ATSGN,    NMBR,   MDASH,
            HLINE,   L_ANG,   R_ANG,   L_DQM,   R_DQM,   VLINE,                    WBUL,  UNDRSC,   AMPRD,    DLLR,    HRVN,   MSIGN,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU,    REDO,    HIDE,   MCTRL,TO(_NAV),   RCAST,                ________,________,________,________,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-             DND,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
+        ________,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),

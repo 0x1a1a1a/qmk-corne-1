@@ -17,7 +17,6 @@
 // Tap-Hold Configuration Options
 // https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md
 // https://precondition.github.io/home-row-mods
-#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 190
 
 
