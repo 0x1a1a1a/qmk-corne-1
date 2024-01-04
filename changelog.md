@@ -18,8 +18,8 @@ Changelog
 #### v2.2
 * [x] Update combo and new `IGNORE_MOD_TAP_INTERRUPT` requirements from QMK
 * [x] Switch back DQUOT and APOSTR
-* [x] Switch back COLON and SMCOLON
 * [x] Remove Do Not Disturb shortcut due to accidentally pressing a key
+* [x] Update instructions in readme.md
 
 
 #### v2.1
@@ -29,7 +29,7 @@ Changelog
 * [x] Moved `combos.c` file to the archive and removed the link in `keymap.c`
     * Why: Combos requires more finger strength (and, therefore, energy) to activate
 
-
+нана
 #### v2
 * [x] Adapted for new EN2.keylayout file
     * Why: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
