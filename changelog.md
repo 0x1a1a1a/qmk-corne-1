@@ -14,6 +14,8 @@ Changelog
 * [ ] Add `Insert` key
 * [ ] Add `Delete` button (Command-Backspace)
 
+#### v2.3
+- [x] Add switch to “No mod-taps” layer
 
 #### v2.2
 * [x] Update combo and new `IGNORE_MOD_TAP_INTERRUPT` requirements from QMK
@@ -29,7 +31,6 @@ Changelog
 * [x] Moved `combos.c` file to the archive and removed the link in `keymap.c`
     * Why: Combos requires more finger strength (and, therefore, energy) to activate
 
-нана
 #### v2
 * [x] Adapted for new EN2.keylayout file
     * Why: There are overlaps in current shortcuts with apps (Visual Studio Code, Figma, Google Spreadsheets) shortcuts
