@@ -156,3 +156,4 @@ enum custom_keycodes {
     #define XPASTE   S(G(KC_V))                    // Paste and Match Style
     #define SELALL   G(KC_A)                       // Select all
     #define HIDE     G(KC_H)                       // Hide current app
+    #define MINIM    G(KC_M)                       // Minimized current window

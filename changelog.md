@@ -14,6 +14,9 @@ Changelog
 * [ ] Add `Insert` key
 * [ ] Add `Delete` button (Command-Backspace)
 
+#### v2.4
+- [x] Add “Minimized a window” shortcut on the left part of the keyboard
+
 #### v2.3
 - [x] Add switch to “No mod-taps” layer
 
