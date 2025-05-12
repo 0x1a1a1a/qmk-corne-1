@@ -153,7 +153,12 @@ enum custom_keycodes {
     #define CUT      G(KC_X)                       // Cut
     #define COPY     G(KC_C)                       // Copy
     #define PASTE    G(KC_V)                       // Paste
-    #define XPASTE   S(G(KC_V))                    // Paste and Match Style
+    #define XPASTE   G(A(S(KC_V)))                 // Paste and Match Style
     #define SELALL   G(KC_A)                       // Select all
     #define HIDE     G(KC_H)                       // Hide current app
     #define MINIM    G(KC_M)                       // Minimized current window
+
+    //
+    #define PROF1    G(S(C(KC_A)))                    // Select Profile 1 in Google Chrome
+    #define PROF2    G(S(C(KC_B)))                    // Select Profile 2 in Google Chrome
+    #define PROF3    G(S(C(KC_C)))                    // Select Profile 3 in Google Chrome

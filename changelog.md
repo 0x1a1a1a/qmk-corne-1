@@ -6,13 +6,18 @@ Changelog
 
 
 #### Up next
-* [ ] Set up [QMK CLI Configuration to qmk.ini](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md)
-* [ ] Visualize the keymap
-* [ ] Add arrows symbols (a dedicated layer?)
-* [ ] Add text selection (a dedicated layer?)
-* [ ] Add mouse keys (a dedicated layer?)
-* [ ] Add `Insert` key
-* [ ] Add `Delete` button (Command-Backspace)
+- [ ] Optimise shortcuts from `MEH` to less used `Command`+`Shift`+`Control`
+- [ ] Set up [QMK CLI Configuration to qmk.ini](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md)
+- [ ] Visualize the keymap
+- [ ] Add arrows symbols (a dedicated layer?)
+- [ ] Add text selection (a dedicated layer?)
+- [ ] Add mouse keys (a dedicated layer?)
+- [ ] Add `Insert` key
+
+#### v2.5-20250512
+- [x] Add `PROF1`, `PROF2`, `PROF3` for switching between Google Chrome profiles
+- [x] Optimise poisition of `TAB_L` (Go to the previous tab) and `TAB_R` (Go to the next tab)
+- [x] Move `KC_DEL` to `_CTL` level
 
 #### v2.4
 - [x] Add “Minimized a window” shortcut on the left part of the keyboard

@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NAV] = LAYOUT_split_3x6_3(
 
         TO(_NMT), M_LIN_L, M_WRD_L,   KC_UP, M_WRD_R, M_LIN_R,                ________,________,________,________,________,________,
-        ________,________, KC_LEFT, KC_DOWN, KC_RGHT,________,                ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
+           TAB_L,   TAB_R, KC_LEFT, KC_DOWN, KC_RGHT,________,                ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
         ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R,                ________,________,________,________,________,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
@@ -74,10 +74,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Controls left
     [_CTL] = LAYOUT_split_3x6_3(
 
-         KC_VOLU,    HIDE,   MINIM,   MCTRL,TO(_NAV),   RCAST,                ________,________,________,________,________, KC_BRIU,
+         KC_VOLU,    HIDE,   MINIM,   MCTRL,TO(_NAV),   RCAST,                ________,   PROF1,   PROF2,   PROF3,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
         ________,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
-                                          KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
+                                          KC_TRNS, KC_TRNS,  KC_DEL,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Controls right
     [_CTR] = LAYOUT_split_3x6_3(
 
-        ________,________,________,________,________,________,                ________,TO(_SPC),   TAB_L,   TAB_R,________,________,
+        ________,________,________,________,________,________,                ________,TO(_SPC),________,________,________,________,
         ________,________,________,________,________,________,                  SS_OPT,TO(_NUM),________,________,________,________,
         ________,________,________,________,________,________,                  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
                                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
