@@ -76,8 +76,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
          KC_VOLU,    HIDE,   MINIM,   MCTRL,TO(_NAV),   RCAST,                ________,   PROF1,   PROF2,   PROF3,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-        ________,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
-                                          KC_TRNS, KC_TRNS,  KC_DEL,     KC_TRNS, KC_TRNS, KC_TRNS
+          KC_DEL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE,                ________,________,________,________,________,________,
+                                          KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
